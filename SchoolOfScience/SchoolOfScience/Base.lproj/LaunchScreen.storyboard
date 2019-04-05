@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-FO-1Rp">
+                                <rect key="frame" x="7.5" y="8.5" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BBK-xh-Xgw"/>
+                                    <constraint firstAttribute="width" constant="140" id="I1g-Gv-ENv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="LrY-nl-wzd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="m5e-wu-GYg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moG-Rr-gXe">
+                                <rect key="frame" x="16" y="229" width="343" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="209" id="P9i-oP-z3A"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="SBq-hn-PSJ"/>
+                                    <constraint firstAttribute="height" constant="209" id="XBj-84-Td2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="te8-NB-pL9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="70"/>
+                                <state key="normal" title="School of Science">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="1xK-FO-1Rp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-300" id="1Nt-Yi-BGX"/>
+                            <constraint firstItem="1xK-FO-1Rp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-110" id="1Sj-W9-0B7"/>
+                            <constraint firstItem="moG-Rr-gXe" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9bF-h9-9Ld"/>
+                            <constraint firstItem="moG-Rr-gXe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nxN-bN-wpi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rmit-logo" width="321.60000610351562" height="111.36000061035156"/>
+    </resources>
+</document>

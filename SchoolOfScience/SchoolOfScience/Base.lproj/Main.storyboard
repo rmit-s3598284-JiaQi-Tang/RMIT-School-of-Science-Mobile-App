@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SchoolOfScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="t8y-Wy-asb">
+                                <rect key="frame" x="7.5" y="8.5" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="17o-sz-aJX"/>
+                                    <constraint firstAttribute="height" constant="50" id="Iop-rl-DzB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bU-NQ-hIB">
+                                <rect key="frame" x="16" y="229" width="343" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="8eL-cE-cSe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="xLC-UE-80Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="70"/>
+                                <state key="normal" title="School of Science">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXZ-gm-5WL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6bU-NQ-hIB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NpA-RN-owL"/>
+                            <constraint firstItem="t8y-Wy-asb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110" id="bLN-i8-zbY"/>
+                            <constraint firstItem="6bU-NQ-hIB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g26-H3-3gc"/>
+                            <constraint firstItem="t8y-Wy-asb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-300" id="mJe-T6-2bp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="cOy-ei-Uly" kind="show" identifier="loginSegue" id="bHg-WG-nQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="dl4-yC-KoR">
+            <objects>
+                <viewController id="1V1-oW-OLw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QxE-Dw-ZQA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="myR-r7-mfm">
+                                <rect key="frame" x="7.5" y="8.5" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="TdX-wP-f1v"/>
+                                    <constraint firstAttribute="height" constant="50" id="yg5-iP-Y2l"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="myR-r7-mfm" firstAttribute="centerX" secondItem="QxE-Dw-ZQA" secondAttribute="centerX" constant="-110" id="YUW-Qb-b9a"/>
+                            <constraint firstItem="myR-r7-mfm" firstAttribute="centerY" secondItem="QxE-Dw-ZQA" secondAttribute="centerY" constant="-300" id="xCF-gX-b0x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bvF-NM-sjP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="n7w-yK-zaT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvv-hj-SqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="43"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="akO-rV-Gqy">
+            <objects>
+                <viewController id="6R4-h4-lap" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8p-61-F4j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="rov-4F-6Kc">
+                                <rect key="frame" x="7.5" y="8.5" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hqk-Xb-5Xu"/>
+                                    <constraint firstAttribute="width" constant="140" id="Rs0-Pn-i2X"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="SHL-Mv-Cy9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="uUY-ec-FQm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="rov-4F-6Kc" firstAttribute="centerY" secondItem="S8p-61-F4j" secondAttribute="centerY" constant="-300" id="ZXX-NC-3gt"/>
+                            <constraint firstItem="rov-4F-6Kc" firstAttribute="centerX" secondItem="S8p-61-F4j" secondAttribute="centerX" constant="-110" id="edA-T8-tgs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="agY-uv-jro"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="EVN-66-RVh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abw-Nn-hdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="840"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="wfc-J1-QrL">
+            <objects>
+                <viewController id="xiw-Fn-CGe" customClass="NewsViewController" customModule="SchoolOfScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Cq-XV-o98">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dtf-it-ThR">
+                                <rect key="frame" x="7.5" y="8.5" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EUR-m7-hNC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="auR-0Z-0J7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="g3p-Tp-YWW"/>
+                                    <constraint firstAttribute="width" constant="140" id="mGH-Aq-e0Y"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k0q-oo-LYy">
+                                <rect key="frame" x="16" y="66.5" width="343" height="551.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="246" id="Yv4-OL-9zd" customClass="NewsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="246"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yv4-OL-9zd" id="eoF-Mc-zQj">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="245.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to School of Science" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nn-E4-Ym5">
+                                                    <rect key="frame" x="40" y="11" width="263" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="KlP-Xg-Nz7"/>
+                                                        <constraint firstAttribute="width" constant="263" id="wDG-X1-Yd8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AxI-Gg-Ax1">
+                                                    <rect key="frame" x="51.5" y="59" width="240" height="128"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="BKk-q3-UQa"/>
+                                                        <constraint firstAttribute="width" constant="240" id="EGM-6T-w3s"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AxI-Gg-Ax1" firstAttribute="centerY" secondItem="eoF-Mc-zQj" secondAttribute="centerY" id="58i-q1-NdM"/>
+                                                <constraint firstItem="9nn-E4-Ym5" firstAttribute="centerY" secondItem="eoF-Mc-zQj" secondAttribute="centerY" constant="-91.75" id="5Gq-WK-5Dd"/>
+                                                <constraint firstItem="9nn-E4-Ym5" firstAttribute="centerX" secondItem="eoF-Mc-zQj" secondAttribute="centerX" id="e2p-gi-znM"/>
+                                                <constraint firstItem="AxI-Gg-Ax1" firstAttribute="centerX" secondItem="eoF-Mc-zQj" secondAttribute="centerX" id="m2R-Zd-lyp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <outlet property="tittleLabel" destination="9nn-E4-Ym5" id="aT0-lb-qix"/>
+                                            <outlet property="tittleUIImage" destination="AxI-Gg-Ax1" id="17f-Gr-wZE"/>
+                                            <segue destination="aiG-NJ-Rqc" kind="show" id="hyI-e6-d6Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xiw-Fn-CGe" id="TAM-9l-F6J"/>
+                                    <outlet property="delegate" destination="xiw-Fn-CGe" id="Wfh-UU-kJj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="k0q-oo-LYy" firstAttribute="firstBaseline" secondItem="Dtf-it-ThR" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="GVY-4t-4g0"/>
+                            <constraint firstItem="Dtf-it-ThR" firstAttribute="centerX" secondItem="8Cq-XV-o98" secondAttribute="centerX" constant="-110" id="LMC-BB-yGg"/>
+                            <constraint firstItem="Dtf-it-ThR" firstAttribute="centerY" secondItem="8Cq-XV-o98" secondAttribute="centerY" constant="-300" id="Oiy-Lc-dRK"/>
+                            <constraint firstItem="Dl7-0X-fcQ" firstAttribute="bottom" secondItem="k0q-oo-LYy" secondAttribute="bottom" id="W7W-BH-kSH"/>
+                            <constraint firstItem="Dl7-0X-fcQ" firstAttribute="trailing" secondItem="k0q-oo-LYy" secondAttribute="trailing" constant="16" id="f5c-XR-bak"/>
+                            <constraint firstItem="k0q-oo-LYy" firstAttribute="leading" secondItem="Dl7-0X-fcQ" secondAttribute="leading" constant="16" id="p7s-9R-wIB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dl7-0X-fcQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" id="kMe-z3-tdR"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="k0q-oo-LYy" id="mOW-Kx-w9Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrm-vS-CCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="-966"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="j2B-O0-ylf">
+            <objects>
+                <viewController id="aiG-NJ-Rqc" customClass="ContentViewController" customModule="SchoolOfScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bd3-4O-R7q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="71I-Jt-wp7">
+                                <rect key="frame" x="7.5" y="8.5" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DC5-Cr-vwG"/>
+                                    <constraint firstAttribute="width" constant="140" id="DEz-6s-j6X"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Fm0-2C-Yiy"/>
+                                    <constraint firstAttribute="height" constant="50" id="ONx-Af-UYe"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="cR0-SO-0yW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="lPJ-Zp-yhu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to School of Science" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WU-yW-w4x">
+                                <rect key="frame" x="16" y="85" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="8jD-jy-5cQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="BBW-as-Ya2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2dR-lA-o0S">
+                                <rect key="frame" x="16" y="385" width="343" height="262"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="U8Z-30-g1Z"/>
+                                    <constraint firstAttribute="width" constant="343" id="rMn-jt-IEu"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-building80" translatesAutoresizingMaskIntoConstraints="NO" id="mhM-kQ-Sec">
+                                <rect key="frame" x="16" y="149" width="343" height="206"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="206" id="kkg-M3-2zF"/>
+                                    <constraint firstAttribute="width" constant="343" id="oyM-Zi-c7Q"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pld-KM-8CB">
+                                <rect key="frame" x="299" y="8.5" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="TbC-zG-RVG"/>
+                                    <constraint firstAttribute="height" constant="50" id="wBc-fi-Lbl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="aiG-NJ-Rqc" eventType="touchUpInside" id="X7B-nS-BUk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="2dR-lA-o0S" firstAttribute="centerY" secondItem="bd3-4O-R7q" secondAttribute="centerY" constant="182.5" id="0RO-sk-wUP"/>
+                            <constraint firstItem="pld-KM-8CB" firstAttribute="centerY" secondItem="bd3-4O-R7q" secondAttribute="centerY" constant="-300" id="6vF-iF-YBq"/>
+                            <constraint firstItem="6WU-yW-w4x" firstAttribute="centerX" secondItem="bd3-4O-R7q" secondAttribute="centerX" id="CNY-PX-A1q"/>
+                            <constraint firstItem="mhM-kQ-Sec" firstAttribute="centerX" secondItem="bd3-4O-R7q" secondAttribute="centerX" id="JiM-qN-xoE"/>
+                            <constraint firstItem="mhM-kQ-Sec" firstAttribute="centerY" secondItem="bd3-4O-R7q" secondAttribute="centerY" constant="-81.5" id="Lee-JI-JaV"/>
+                            <constraint firstItem="pld-KM-8CB" firstAttribute="centerX" secondItem="bd3-4O-R7q" secondAttribute="centerX" constant="141.5" id="O6U-59-5ij"/>
+                            <constraint firstItem="6WU-yW-w4x" firstAttribute="centerY" secondItem="bd3-4O-R7q" secondAttribute="centerY" constant="-228.5" id="QRm-x3-YXx"/>
+                            <constraint firstItem="71I-Jt-wp7" firstAttribute="centerX" secondItem="bd3-4O-R7q" secondAttribute="centerX" constant="-110" id="W23-Qh-GxP"/>
+                            <constraint firstItem="2dR-lA-o0S" firstAttribute="centerX" secondItem="bd3-4O-R7q" secondAttribute="centerX" id="gK7-N3-DeF"/>
+                            <constraint firstItem="71I-Jt-wp7" firstAttribute="centerY" secondItem="bd3-4O-R7q" secondAttribute="centerY" constant="-300" id="qKf-sb-fwf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MlE-XL-a9d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sym-8L-dVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="-967"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xfn-gH-xTa">
+            <objects>
+                <tabBarController id="cOy-ei-Uly" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u7W-Wg-yIN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xiw-Fn-CGe" kind="relationship" relationship="viewControllers" id="ik2-5Q-db5"/>
+                        <segue destination="6R4-h4-lap" kind="relationship" relationship="viewControllers" id="kzz-vX-rS4"/>
+                        <segue destination="1V1-oW-OLw" kind="relationship" relationship="viewControllers" id="yvM-lM-b72"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbv-Ei-asT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rmit-building80" width="900" height="600"/>
+        <image name="rmit-logo" width="321.60000610351562" height="111.36000061035156"/>
+    </resources>
+</document>
