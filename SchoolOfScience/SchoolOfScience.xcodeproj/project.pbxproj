@@ -15,7 +15,7 @@
 		CDD66C1C2254D84100B7B8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C1A2254D84100B7B8D1 /* LaunchScreen.storyboard */; };
 		CDD66C272254D84200B7B8D1 /* SchoolOfScienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C262254D84200B7B8D1 /* SchoolOfScienceTests.swift */; };
 		CDD66C322254D84200B7B8D1 /* SchoolOfScienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */; };
-		CDD66C402254E58800B7B8D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C3F2254E58800B7B8D1 /* GoogleService-Info.plist */; };
+		CDD78CC3225796F500823E06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD78CC2225796F500823E06 /* GoogleService-Info.plist */; };
 		CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FD22565E1700382985 /* NewsViewController.swift */; };
 		CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FF22565E4900382985 /* NewsTableViewCell.swift */; };
 		CDF37A02225662A800382985 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* ContentViewController.swift */; };
@@ -57,7 +57,7 @@
 		CDD66C2D2254D84200B7B8D1 /* SchoolOfScienceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolOfScienceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolOfScienceUITests.swift; sourceTree = "<group>"; };
 		CDD66C332254D84200B7B8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDD66C3F2254E58800B7B8D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDD78CC2225796F500823E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDF379FD22565E1700382985 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CDF379FF22565E4900382985 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CDF37A01225662A800382985 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -124,12 +124,12 @@
 		CDD66C102254D83F00B7B8D1 /* SchoolOfScience */ = {
 			isa = PBXGroup;
 			children = (
+				CDD78CC2225796F500823E06 /* GoogleService-Info.plist */,
 				CDD66C112254D83F00B7B8D1 /* AppDelegate.swift */,
 				CDD66C132254D83F00B7B8D1 /* ViewController.swift */,
 				CDD66C152254D83F00B7B8D1 /* Main.storyboard */,
 				CDD66C182254D84100B7B8D1 /* Assets.xcassets */,
 				CDD66C1A2254D84100B7B8D1 /* LaunchScreen.storyboard */,
-				CDD66C3F2254E58800B7B8D1 /* GoogleService-Info.plist */,
 				CDD66C1D2254D84100B7B8D1 /* Info.plist */,
 				CDF379FD22565E1700382985 /* NewsViewController.swift */,
 				CDF379FF22565E4900382985 /* NewsTableViewCell.swift */,
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD66C1C2254D84100B7B8D1 /* LaunchScreen.storyboard in Resources */,
-				CDD66C402254E58800B7B8D1 /* GoogleService-Info.plist in Resources */,
+				CDD78CC3225796F500823E06 /* GoogleService-Info.plist in Resources */,
 				CDD66C192254D84100B7B8D1 /* Assets.xcassets in Resources */,
 				CDD66C172254D83F00B7B8D1 /* Main.storyboard in Resources */,
 			);
