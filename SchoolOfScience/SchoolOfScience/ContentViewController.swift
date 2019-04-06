@@ -13,6 +13,7 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
         let firebaseAuth = Auth.auth()
         guard let user = firebaseAuth.currentUser else {return}
         guard let name = user.displayName else {return}

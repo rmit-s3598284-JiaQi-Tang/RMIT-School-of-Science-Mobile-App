@@ -11,8 +11,16 @@ import Firebase
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
+
+    override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if(Auth.auth().currentUser != nil) {
+            performSegue(withIdentifier: "loginSegue", sender: nil)
+        }
+    }
     @IBAction func loginTapped(_ sender: Any) {
         guard let email = emailTextField.text else {return}
         guard let password = passwordTextField.text else {return}
@@ -40,6 +48,17 @@ class LoginViewController: UIViewController {
             }
         }
     }
+}
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
