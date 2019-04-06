@@ -23,7 +23,9 @@ class SettingsViewController: UIViewController {
         guard let name = user.displayName else {return}
         let alert = UIAlertController(title: "Are you sure to logout \(name) ?", message: "", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: {Void in self.logout()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {Void in})
         alert.addAction(okAction)
+        alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
         
     }
