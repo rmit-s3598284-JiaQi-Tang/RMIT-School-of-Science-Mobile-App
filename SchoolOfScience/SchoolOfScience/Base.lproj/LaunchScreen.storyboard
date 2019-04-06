@@ -18,45 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-FO-1Rp">
-                                <rect key="frame" x="57.5" y="38.5" width="250" height="90"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EDUCATION_RMIT-City" translatesAutoresizingMaskIntoConstraints="NO" id="421-dx-u60">
+                                <rect key="frame" x="0.0" y="-71.5" width="375" height="810"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="BBK-xh-Xgw"/>
-                                    <constraint firstAttribute="width" constant="250" id="I1g-Gv-ENv"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="LrY-nl-wzd"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="m5e-wu-GYg"/>
+                                    <constraint firstAttribute="height" constant="810" id="rc7-Jt-tgX"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moG-Rr-gXe">
-                                <rect key="frame" x="16" y="255" width="343" height="209"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Blk-fB-Sjn">
+                                <rect key="frame" x="210" y="30" width="149" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="209" id="P9i-oP-z3A"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="SBq-hn-PSJ"/>
-                                    <constraint firstAttribute="height" constant="209" id="XBj-84-Td2"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="te8-NB-pL9"/>
+                                    <constraint firstAttribute="width" constant="149" id="CNU-GC-j3I"/>
+                                    <constraint firstAttribute="height" constant="50" id="T2P-XD-d1B"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="70"/>
-                                <state key="normal" title="School of Science">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="1xK-FO-1Rp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-250" id="1Nt-Yi-BGX"/>
-                            <constraint firstItem="1xK-FO-1Rp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-5" id="1Sj-W9-0B7"/>
-                            <constraint firstItem="moG-Rr-gXe" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="26" id="9bF-h9-9Ld"/>
-                            <constraint firstItem="moG-Rr-gXe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nxN-bN-wpi"/>
+                            <constraint firstItem="Blk-fB-Sjn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="97" id="Qig-jH-BYy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="421-dx-u60" secondAttribute="trailing" id="Rf3-Bd-2SF"/>
+                            <constraint firstItem="421-dx-u60" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ebE-6p-zUj"/>
+                            <constraint firstItem="421-dx-u60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oax-ZW-QNZ"/>
+                            <constraint firstItem="Blk-fB-Sjn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-278.5" id="v2B-qS-axn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
+        <image name="EDUCATION_RMIT-City" width="600" height="900"/>
         <image name="rmit-logo" width="321.60000610351562" height="111.36000061035156"/>
     </resources>
 </document>
