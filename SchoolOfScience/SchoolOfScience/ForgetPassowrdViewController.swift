@@ -21,6 +21,15 @@ class ForgetPassowrdViewController: UIViewController {
         
         guard let email = emailTextField.text else {return}
 
+        if(!(email.hasSuffix("@rmit.edu.au") || email.hasSuffix("@student.rmit.edu.au"))) {
+            let alert = UIAlertController(title: "This is not a RMIT Email", message: "", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: {Void in})
+            alert.addAction(okAction)
+            alert.setValue(NSAttributedString(string: alert.title!, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor : UIColor.red]), forKey: "attributedTitle")
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
 
             guard let error = error else {
