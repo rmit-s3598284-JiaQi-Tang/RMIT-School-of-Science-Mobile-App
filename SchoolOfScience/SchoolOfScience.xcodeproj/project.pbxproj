@@ -140,12 +140,12 @@
 				CDD66C1D2254D84100B7B8D1 /* Info.plist */,
 				CDF379FD22565E1700382985 /* NewsViewController.swift */,
 				CDF379FF22565E4900382985 /* NewsTableViewCell.swift */,
+				CDD78CCE225859FF00823E06 /* CalendarViewController.swift */,
 				CDF37A01225662A800382985 /* ContentViewController.swift */,
 				CDD66C132254D83F00B7B8D1 /* LoginViewController.swift */,
 				CDD78CC82258461100823E06 /* SignUpViewController.swift */,
 				CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */,
 				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
-				CDD78CCE225859FF00823E06 /* CalendarViewController.swift */,
 			);
 			path = SchoolOfScience;
 			sourceTree = "<group>";

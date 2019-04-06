@@ -7,11 +7,18 @@
 //
 
 import UIKit
-
+import Firebase
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var newsTableView: UITableView!
-    
+
+    override func viewDidLoad() {
+        let firebaseAuth = Auth.auth()
+        guard let user = firebaseAuth.currentUser else {return}
+        guard let name = user.displayName else {return}
+        nameLabel.text = name
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }

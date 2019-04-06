@@ -7,13 +7,16 @@
 //
 
 import UIKit
-
+import Firebase
 class ContentViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let firebaseAuth = Auth.auth()
+        guard let user = firebaseAuth.currentUser else {return}
+        guard let name = user.displayName else {return}
+        nameLabel.text = name
     }
     
 
