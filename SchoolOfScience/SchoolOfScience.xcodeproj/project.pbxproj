@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		4ABAA6D5131539BED5F635C0 /* Pods_SchoolOfScience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */; };
 		CDD66C122254D83F00B7B8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C112254D83F00B7B8D1 /* AppDelegate.swift */; };
-		CDD66C142254D83F00B7B8D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C132254D83F00B7B8D1 /* ViewController.swift */; };
+		CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C132254D83F00B7B8D1 /* LoginViewController.swift */; };
 		CDD66C172254D83F00B7B8D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C152254D83F00B7B8D1 /* Main.storyboard */; };
 		CDD66C192254D84100B7B8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C182254D84100B7B8D1 /* Assets.xcassets */; };
 		CDD66C1C2254D84100B7B8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C1A2254D84100B7B8D1 /* LaunchScreen.storyboard */; };
 		CDD66C272254D84200B7B8D1 /* SchoolOfScienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C262254D84200B7B8D1 /* SchoolOfScienceTests.swift */; };
 		CDD66C322254D84200B7B8D1 /* SchoolOfScienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */; };
 		CDD78CC3225796F500823E06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD78CC2225796F500823E06 /* GoogleService-Info.plist */; };
+		CDD78CC92258461100823E06 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CC82258461100823E06 /* SignUpViewController.swift */; };
+		CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */; };
+		CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCC225859CE00823E06 /* SettingsViewController.swift */; };
+		CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCE225859FF00823E06 /* CalendarViewController.swift */; };
 		CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FD22565E1700382985 /* NewsViewController.swift */; };
 		CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FF22565E4900382985 /* NewsTableViewCell.swift */; };
 		CDF37A02225662A800382985 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* ContentViewController.swift */; };
@@ -46,7 +50,7 @@
 		889C276F8F3D05E70A3F4B73 /* Pods-SchoolOfScience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.release.xcconfig"; sourceTree = "<group>"; };
 		CDD66C0E2254D83F00B7B8D1 /* SchoolOfScience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolOfScience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD66C112254D83F00B7B8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDD66C132254D83F00B7B8D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDD66C132254D83F00B7B8D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CDD66C162254D83F00B7B8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDD66C182254D84100B7B8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD66C1B2254D84100B7B8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +62,10 @@
 		CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolOfScienceUITests.swift; sourceTree = "<group>"; };
 		CDD66C332254D84200B7B8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD78CC2225796F500823E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDD78CC82258461100823E06 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowrdViewController.swift; sourceTree = "<group>"; };
+		CDD78CCC225859CE00823E06 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CDD78CCE225859FF00823E06 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		CDF379FD22565E1700382985 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CDF379FF22565E4900382985 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CDF37A01225662A800382985 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -126,14 +134,18 @@
 			children = (
 				CDD78CC2225796F500823E06 /* GoogleService-Info.plist */,
 				CDD66C112254D83F00B7B8D1 /* AppDelegate.swift */,
-				CDD66C132254D83F00B7B8D1 /* ViewController.swift */,
 				CDD66C152254D83F00B7B8D1 /* Main.storyboard */,
 				CDD66C182254D84100B7B8D1 /* Assets.xcassets */,
 				CDD66C1A2254D84100B7B8D1 /* LaunchScreen.storyboard */,
 				CDD66C1D2254D84100B7B8D1 /* Info.plist */,
+				CDD66C132254D83F00B7B8D1 /* LoginViewController.swift */,
 				CDF379FD22565E1700382985 /* NewsViewController.swift */,
 				CDF379FF22565E4900382985 /* NewsTableViewCell.swift */,
 				CDF37A01225662A800382985 /* ContentViewController.swift */,
+				CDD78CC82258461100823E06 /* SignUpViewController.swift */,
+				CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */,
+				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
+				CDD78CCE225859FF00823E06 /* CalendarViewController.swift */,
 			);
 			path = SchoolOfScience;
 			sourceTree = "<group>";
@@ -373,11 +385,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD78CC92258461100823E06 /* SignUpViewController.swift in Sources */,
 				CDF37A02225662A800382985 /* ContentViewController.swift in Sources */,
 				CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */,
-				CDD66C142254D83F00B7B8D1 /* ViewController.swift in Sources */,
+				CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */,
 				CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */,
 				CDD66C122254D83F00B7B8D1 /* AppDelegate.swift in Sources */,
+				CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */,
+				CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */,
+				CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

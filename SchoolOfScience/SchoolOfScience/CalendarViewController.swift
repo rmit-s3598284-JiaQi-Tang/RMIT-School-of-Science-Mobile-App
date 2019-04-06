@@ -1,14 +1,14 @@
 //
-//  ContentViewController.swift
+//  CalendarViewController.swift
 //  SchoolOfScience
 //
-//  Created by Jacky Tang on 5/4/19.
+//  Created by Jacky Tang on 6/4/19.
 //  Copyright © 2019 Jacky Tang. All rights reserved.
 //
 
 import UIKit
 
-class ContentViewController: UIViewController {
+class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,4 @@ class ContentViewController: UIViewController {
     }
     */
 
-    @IBAction func logoTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
