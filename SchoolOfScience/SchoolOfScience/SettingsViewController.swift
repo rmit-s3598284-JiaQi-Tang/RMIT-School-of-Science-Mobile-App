@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseUI
 import Firebase
 
 class SettingsViewController: UIViewController {
@@ -26,7 +24,6 @@ class SettingsViewController: UIViewController {
         let alert = UIAlertController(title: "Are you sure to logout \(name) ?", message: "", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: {Void in self.logout()})
         alert.addAction(okAction)
-        alert.setValue(NSAttributedString(string: alert.title!, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.medium), NSAttributedString.Key.foregroundColor : UIColor.red]), forKey: "attributedTitle")
         self.present(alert, animated: true, completion: nil)
         
     }

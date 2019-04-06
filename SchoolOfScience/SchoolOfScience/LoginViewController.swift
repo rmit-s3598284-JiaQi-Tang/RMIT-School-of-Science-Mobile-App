@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseUI
 import Firebase
 class LoginViewController: UIViewController {
 
@@ -16,16 +14,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func loginTapped(_ sender: Any) {
-//        let authUI = FUIAuth.defaultAuthUI()
-//
-//        guard authUI != nil else {
-//            return
-//        }
-//
-//        authUI?.delegate = self
-//        let authViewCountroller = authUI!.authViewController()
-//
-//        present(authViewCountroller, animated: true, completion: nil)
         guard let email = emailTextField.text else {return}
         guard let password = passwordTextField.text else {return}
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -43,16 +31,5 @@ class LoginViewController: UIViewController {
         }
     }
 
-}
-
-extension LoginViewController: FUIAuthDelegate {
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-
-        if error != nil {
-            return
-        }
-
-        performSegue(withIdentifier: "loginSegue", sender: self)
-    }
 }
 
