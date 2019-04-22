@@ -21,13 +21,43 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         nameLabel.text = name
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var count: Int = 0
+        DispatchQueue.main.async {
+            JsonManager.getFeeds() {feeds in
+                if let feeds = feeds {
+                    count = feeds.count
+                }
+            }
+        }
         return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
-        cell.tittleLabel.text = "Welcome to School of Science"
-        cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
+
+        JsonManager.getFeeds() {feeds in
+            DispatchQueue.main.async {
+                if let feeds = feeds {
+                    cell.tittleLabel.text = feeds[indexPath.row].title
+                    if let imageURL = feeds[indexPath.row].imageurl {
+
+                        let url = URL(string: imageURL)
+                        if let url = url {
+                            let data = try? Data(contentsOf: url)
+                            if let imageData = data {
+                                cell.tittleUIImage.image = UIImage(data: imageData)
+                            }
+                        } else {
+                            cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
+                        }
+
+
+                    } else {
+                        cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
+                    }
+                }
+            }
+        }
         return cell
     }
 

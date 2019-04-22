@@ -23,6 +23,8 @@
 		CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */; };
 		CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCC225859CE00823E06 /* SettingsViewController.swift */; };
 		CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCE225859FF00823E06 /* CalendarViewController.swift */; };
+		CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EE3C226D873800208613 /* JsonModels.swift */; };
+		CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EE3E226D878E00208613 /* JsonManager.swift */; };
 		CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FD22565E1700382985 /* NewsViewController.swift */; };
 		CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FF22565E4900382985 /* NewsTableViewCell.swift */; };
 		CDF37A02225662A800382985 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* ContentViewController.swift */; };
@@ -72,6 +74,8 @@
 		CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowrdViewController.swift; sourceTree = "<group>"; };
 		CDD78CCC225859CE00823E06 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CDD78CCE225859FF00823E06 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		CDF0EE3C226D873800208613 /* JsonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModels.swift; sourceTree = "<group>"; };
+		CDF0EE3E226D878E00208613 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		CDF379FD22565E1700382985 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CDF379FF22565E4900382985 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CDF37A01225662A800382985 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		CDD66C052254D83E00B7B8D1 = {
 			isa = PBXGroup;
 			children = (
+				CDF0EE3B226D871100208613 /* API */,
 				CDD66C102254D83F00B7B8D1 /* SchoolOfScience */,
 				CDC01BB52266384D00FFE2BF /* Claendar */,
 				CDD66C252254D84200B7B8D1 /* SchoolOfScienceTests */,
@@ -183,6 +188,15 @@
 				CDD66C332254D84200B7B8D1 /* Info.plist */,
 			);
 			path = SchoolOfScienceUITests;
+			sourceTree = "<group>";
+		};
+		CDF0EE3B226D871100208613 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CDF0EE3C226D873800208613 /* JsonModels.swift */,
+				CDF0EE3E226D878E00208613 /* JsonManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		F679AF34C908036627D76745 /* Pods */ = {
@@ -408,8 +422,10 @@
 				CDF37A02225662A800382985 /* ContentViewController.swift in Sources */,
 				CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */,
 				CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */,
+				CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */,
 				CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */,
 				CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */,
+				CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */,
 				CDD66C122254D83F00B7B8D1 /* AppDelegate.swift in Sources */,
 				CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */,
 				CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */,
