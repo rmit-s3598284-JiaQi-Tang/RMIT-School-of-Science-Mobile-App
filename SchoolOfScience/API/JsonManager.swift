@@ -13,8 +13,7 @@ class JsonManager {
     typealias CompletionHandler = ([Feed]?) -> Void
 
     public static func getFeeds(completion: @escaping CompletionHandler) {
-//        var feeds: [Feed] = []
-        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?department=ALL&feedType=NEWS&index=0&size=10")
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?department=ALL&feedType=NEWS&index=0&size=100")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")
@@ -25,10 +24,6 @@ class JsonManager {
                         let json = try JSONDecoder().decode(Welcome.self, from: data) as Welcome
                         // HERE'S WHERE YOUR DATA IS
                         completion(json.feed)
-//                        feeds = json.feed
-//                        for loopFeed in json.feed {
-//                            print(loopFeed.title)
-//                        }
                     } catch {
                         print(error.localizedDescription)
                     }
@@ -36,9 +31,5 @@ class JsonManager {
             }
             dataTask.resume()
         }
-//        for loopFeed in feeds {
-//            print(loopFeed.title)
-//        }
-//        return feeds
     }
 }

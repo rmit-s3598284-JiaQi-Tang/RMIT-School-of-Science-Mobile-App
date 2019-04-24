@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var existFeeds = [Feed]()
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var newsTableView: UITableView!
 
@@ -19,46 +20,44 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let user = firebaseAuth.currentUser else {return}
         guard let name = user.displayName else {return}
         nameLabel.text = name
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count: Int = 0
-        DispatchQueue.main.async {
-            JsonManager.getFeeds() {feeds in
+
+
+        JsonManager.getFeeds() {feeds in
+            DispatchQueue.main.async {
                 if let feeds = feeds {
-                    count = feeds.count
+                    for existFeed in feeds {
+                        if existFeed.deleted == false {
+                            self.existFeeds.append(existFeed)
+                        }
+                    }
                 }
+                self.newsTableView.reloadData()
             }
         }
-        return 10
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return existFeeds.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
 
-        JsonManager.getFeeds() {feeds in
-            DispatchQueue.main.async {
-                if let feeds = feeds {
-                    cell.tittleLabel.text = feeds[indexPath.row].title
-                    if let imageURL = feeds[indexPath.row].imageurl {
+        cell.tittleLabel.text = self.existFeeds[indexPath.row].title
+        if let imageURL = self.existFeeds[indexPath.row].imageurl {
 
-                        let url = URL(string: imageURL)
-                        if let url = url {
-                            let data = try? Data(contentsOf: url)
-                            if let imageData = data {
-                                cell.tittleUIImage.image = UIImage(data: imageData)
-                            } else {
-                                cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
-                            }
-                        } else {
-                            cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
-                        }
-                    } else {
-                        cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
-                    }
+            let url = URL(string: imageURL)
+            if let url = url {
+                let data = try? Data(contentsOf: url)
+                if let imageData = data {
+                    cell.tittleUIImage.image = UIImage(data: imageData)
                 } else {
                     cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
                 }
+            } else {
+                cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
             }
+        } else {
+            cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
         }
         return cell
     }
