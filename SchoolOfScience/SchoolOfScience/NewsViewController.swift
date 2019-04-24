@@ -46,15 +46,17 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                             let data = try? Data(contentsOf: url)
                             if let imageData = data {
                                 cell.tittleUIImage.image = UIImage(data: imageData)
+                            } else {
+                                cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
                             }
                         } else {
                             cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
                         }
-
-
                     } else {
                         cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
                     }
+                } else {
+                    cell.tittleUIImage.image = UIImage.init(named: "rmit-building80")
                 }
             }
         }
