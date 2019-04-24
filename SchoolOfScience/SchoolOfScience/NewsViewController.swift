@@ -13,7 +13,11 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     var existFeeds = [Feed]()
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var newsTableView: UITableView!
-
+    @IBOutlet weak var allButton: UIButton!
+    @IBOutlet weak var generalButton: UIButton!
+    @IBOutlet weak var researchButton: UIButton!
+    @IBOutlet weak var learningButton: UIButton!
+    
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround() 
         let firebaseAuth = Auth.auth()
@@ -22,7 +26,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         nameLabel.text = name
 
 
-        JsonManager.getFeeds() {feeds in
+        JsonManager.getFeeds(department: "RESEARCH") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
@@ -36,6 +40,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(existFeeds.count)
         return existFeeds.count
     }
 
@@ -66,4 +71,83 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         return CGFloat(250)
     }
 
+    @IBAction func allButtonTapped(_ sender: Any) {
+        existFeeds.removeAll()
+        JsonManager.getFeeds(department: "ALL") {feeds in
+            DispatchQueue.main.async {
+                if let feeds = feeds {
+                    for existFeed in feeds {
+                        if existFeed.deleted == false {
+                            self.existFeeds.append(existFeed)
+                        }
+                    }
+                }
+                self.newsTableView.reloadData()
+            }
+        }
+        allButton.backgroundColor = UIColor.darkGray
+        generalButton.backgroundColor = UIColor.black
+        researchButton.backgroundColor = UIColor.black
+        learningButton.backgroundColor = UIColor.black
+    }
+
+    @IBAction func generalButtonTapped(_ sender: Any) {
+        existFeeds.removeAll()
+        JsonManager.getFeeds(department: "GENERAL") {feeds in
+            DispatchQueue.main.async {
+                if let feeds = feeds {
+                    for existFeed in feeds {
+                        if existFeed.deleted == false {
+                            self.existFeeds.append(existFeed)
+                        }
+                    }
+                }
+                self.newsTableView.reloadData()
+            }
+        }
+        allButton.backgroundColor = UIColor.black
+        generalButton.backgroundColor = UIColor.darkGray
+        researchButton.backgroundColor = UIColor.black
+        learningButton.backgroundColor = UIColor.black
+    }
+
+    @IBAction func researchButtonTapped(_ sender: Any) {
+        existFeeds.removeAll()
+        JsonManager.getFeeds(department: "RESEARCH") {feeds in
+            DispatchQueue.main.async {
+                if let feeds = feeds {
+                    for existFeed in feeds {
+                        if existFeed.deleted == false {
+                            self.existFeeds.append(existFeed)
+                        }
+                    }
+                }
+                self.newsTableView.reloadData()
+            }
+        }
+        allButton.backgroundColor = UIColor.black
+        generalButton.backgroundColor = UIColor.black
+        researchButton.backgroundColor = UIColor.darkGray
+        learningButton.backgroundColor = UIColor.black
+    }
+
+    @IBAction func learningButtonTapped(_ sender: Any) {
+        existFeeds.removeAll()
+        JsonManager.getFeeds(department: "Learning") {feeds in
+            DispatchQueue.main.async {
+                if let feeds = feeds {
+                    for existFeed in feeds {
+                        if existFeed.deleted == false {
+                            self.existFeeds.append(existFeed)
+                        }
+                    }
+                }
+                self.newsTableView.reloadData()
+            }
+        }
+        allButton.backgroundColor = UIColor.black
+        generalButton.backgroundColor = UIColor.black
+        researchButton.backgroundColor = UIColor.black
+        learningButton.backgroundColor = UIColor.darkGray
+    }
 }

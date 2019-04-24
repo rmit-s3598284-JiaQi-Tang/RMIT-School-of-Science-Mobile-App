@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 struct Welcome: Codable {
     let code: Int
     let message: String
@@ -17,8 +18,10 @@ struct Welcome: Codable {
 struct Feed: Codable {
     let feedID: String
     let createdDate: Int
-    let news, authorID, title: String
-    let department: Department
+    let news: String?
+    let authorID: AuthorID
+    let title: String?
+    let department: String
     let updatedDate: Int
     let category: Category
     let deadlineDate, eventTagline: JSONNull?
@@ -34,12 +37,12 @@ struct Feed: Codable {
     }
 }
 
-enum Category: String, Codable {
-    case news = "NEWS"
+enum AuthorID: String, Codable {
+    case testUser1RmitEduAu = "test.user1@rmit.edu.au"
 }
 
-enum Department: String, Codable {
-    case all = "ALL"
+enum Category: String, Codable {
+    case news = "NEWS"
 }
 
 // MARK: Encode/decode helpers

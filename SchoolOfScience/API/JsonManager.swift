@@ -12,8 +12,8 @@ class JsonManager {
 
     typealias CompletionHandler = ([Feed]?) -> Void
 
-    public static func getFeeds(completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?department=ALL&feedType=NEWS&index=0&size=100")
+    public static func getFeeds(department: String, completion: @escaping CompletionHandler) {
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?department=\(department)&feedType=NEWS&index=0&size=100")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")
