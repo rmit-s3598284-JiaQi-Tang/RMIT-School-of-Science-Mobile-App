@@ -11,22 +11,20 @@ import Firebase
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var existFeeds = [Feed]()
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var newsTableView: UITableView!
-    @IBOutlet weak var allButton: UIButton!
     @IBOutlet weak var generalButton: UIButton!
     @IBOutlet weak var researchButton: UIButton!
     @IBOutlet weak var learningButton: UIButton!
     
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround() 
-        let firebaseAuth = Auth.auth()
-        guard let user = firebaseAuth.currentUser else {return}
-        guard let name = user.displayName else {return}
-        nameLabel.text = name
+//        let firebaseAuth = Auth.auth()
+//        guard let user = firebaseAuth.currentUser else {return}
+//        guard let name = user.displayName else {return}
+//        nameLabel.text = name
 
 
-        JsonManager.getFeeds(department: "RESEARCH") {feeds in
+        JsonManager.getFeeds(department: "GENERAL") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
@@ -38,6 +36,9 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.newsTableView.reloadData()
             }
         }
+        generalButton.backgroundColor = UIColor.darkGray
+        researchButton.backgroundColor = UIColor.black
+        learningButton.backgroundColor = UIColor.black
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(existFeeds.count)
@@ -48,6 +49,15 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsTableViewCell
 
         cell.tittleLabel.text = self.existFeeds[indexPath.row].title
+
+
+        let timeInterval = self.existFeeds[indexPath.row].createdDate/1000
+        let myDate = Date(timeIntervalSince1970: Double(timeInterval))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-yyyy"
+
+        let stringDate = formatter.string(from: myDate as Date)
+        cell.dateLabel.text = stringDate
         if let imageURL = self.existFeeds[indexPath.row].imageurl {
 
             let url = URL(string: imageURL)
@@ -68,27 +78,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(250)
-    }
-
-    @IBAction func allButtonTapped(_ sender: Any) {
-        existFeeds.removeAll()
-        JsonManager.getFeeds(department: "ALL") {feeds in
-            DispatchQueue.main.async {
-                if let feeds = feeds {
-                    for existFeed in feeds {
-                        if existFeed.deleted == false {
-                            self.existFeeds.append(existFeed)
-                        }
-                    }
-                }
-                self.newsTableView.reloadData()
-            }
-        }
-        allButton.backgroundColor = UIColor.darkGray
-        generalButton.backgroundColor = UIColor.black
-        researchButton.backgroundColor = UIColor.black
-        learningButton.backgroundColor = UIColor.black
+        return CGFloat(125)
     }
 
     @IBAction func generalButtonTapped(_ sender: Any) {
@@ -105,7 +95,6 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.newsTableView.reloadData()
             }
         }
-        allButton.backgroundColor = UIColor.black
         generalButton.backgroundColor = UIColor.darkGray
         researchButton.backgroundColor = UIColor.black
         learningButton.backgroundColor = UIColor.black
@@ -125,7 +114,6 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.newsTableView.reloadData()
             }
         }
-        allButton.backgroundColor = UIColor.black
         generalButton.backgroundColor = UIColor.black
         researchButton.backgroundColor = UIColor.darkGray
         learningButton.backgroundColor = UIColor.black
@@ -145,9 +133,10 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.newsTableView.reloadData()
             }
         }
-        allButton.backgroundColor = UIColor.black
         generalButton.backgroundColor = UIColor.black
         researchButton.backgroundColor = UIColor.black
         learningButton.backgroundColor = UIColor.darkGray
     }
 }
+
+

@@ -16,8 +16,6 @@
 		CDD66C172254D83F00B7B8D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C152254D83F00B7B8D1 /* Main.storyboard */; };
 		CDD66C192254D84100B7B8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C182254D84100B7B8D1 /* Assets.xcassets */; };
 		CDD66C1C2254D84100B7B8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD66C1A2254D84100B7B8D1 /* LaunchScreen.storyboard */; };
-		CDD66C272254D84200B7B8D1 /* SchoolOfScienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C262254D84200B7B8D1 /* SchoolOfScienceTests.swift */; };
-		CDD66C322254D84200B7B8D1 /* SchoolOfScienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */; };
 		CDD78CC3225796F500823E06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD78CC2225796F500823E06 /* GoogleService-Info.plist */; };
 		CDD78CC92258461100823E06 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CC82258461100823E06 /* SignUpViewController.swift */; };
 		CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */; };
@@ -29,23 +27,6 @@
 		CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FF22565E4900382985 /* NewsTableViewCell.swift */; };
 		CDF37A02225662A800382985 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CDD66C232254D84200B7B8D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CDD66C062254D83E00B7B8D1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CDD66C0D2254D83F00B7B8D1;
-			remoteInfo = SchoolOfScience;
-		};
-		CDD66C2E2254D84200B7B8D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CDD66C062254D83E00B7B8D1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CDD66C0D2254D83F00B7B8D1;
-			remoteInfo = SchoolOfScience;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		16B18CCEEA28716CB2B2FAE3 /* Pods-SchoolOfScience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,12 +44,6 @@
 		CDD66C182254D84100B7B8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD66C1B2254D84100B7B8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDD66C1D2254D84100B7B8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDD66C222254D84200B7B8D1 /* SchoolOfScienceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolOfScienceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDD66C262254D84200B7B8D1 /* SchoolOfScienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolOfScienceTests.swift; sourceTree = "<group>"; };
-		CDD66C282254D84200B7B8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDD66C2D2254D84200B7B8D1 /* SchoolOfScienceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolOfScienceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolOfScienceUITests.swift; sourceTree = "<group>"; };
-		CDD66C332254D84200B7B8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDD78CC2225796F500823E06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDD78CC82258461100823E06 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowrdViewController.swift; sourceTree = "<group>"; };
@@ -87,20 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABAA6D5131539BED5F635C0 /* Pods_SchoolOfScience.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDD66C1F2254D84200B7B8D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDD66C2A2254D84200B7B8D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +95,6 @@
 				CDF0EE3B226D871100208613 /* API */,
 				CDD66C102254D83F00B7B8D1 /* SchoolOfScience */,
 				CDC01BB52266384D00FFE2BF /* Claendar */,
-				CDD66C252254D84200B7B8D1 /* SchoolOfScienceTests */,
-				CDD66C302254D84200B7B8D1 /* SchoolOfScienceUITests */,
 				CDD66C0F2254D83F00B7B8D1 /* Products */,
 				F679AF34C908036627D76745 /* Pods */,
 				213593D0051C30CC7EF68BDF /* Frameworks */,
@@ -146,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				CDD66C0E2254D83F00B7B8D1 /* SchoolOfScience.app */,
-				CDD66C222254D84200B7B8D1 /* SchoolOfScienceTests.xctest */,
-				CDD66C2D2254D84200B7B8D1 /* SchoolOfScienceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,24 +127,6 @@
 				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
 			);
 			path = SchoolOfScience;
-			sourceTree = "<group>";
-		};
-		CDD66C252254D84200B7B8D1 /* SchoolOfScienceTests */ = {
-			isa = PBXGroup;
-			children = (
-				CDD66C262254D84200B7B8D1 /* SchoolOfScienceTests.swift */,
-				CDD66C282254D84200B7B8D1 /* Info.plist */,
-			);
-			path = SchoolOfScienceTests;
-			sourceTree = "<group>";
-		};
-		CDD66C302254D84200B7B8D1 /* SchoolOfScienceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CDD66C312254D84200B7B8D1 /* SchoolOfScienceUITests.swift */,
-				CDD66C332254D84200B7B8D1 /* Info.plist */,
-			);
-			path = SchoolOfScienceUITests;
 			sourceTree = "<group>";
 		};
 		CDF0EE3B226D871100208613 /* API */ = {
@@ -231,42 +170,6 @@
 			productReference = CDD66C0E2254D83F00B7B8D1 /* SchoolOfScience.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CDD66C212254D84200B7B8D1 /* SchoolOfScienceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDD66C392254D84200B7B8D1 /* Build configuration list for PBXNativeTarget "SchoolOfScienceTests" */;
-			buildPhases = (
-				CDD66C1E2254D84200B7B8D1 /* Sources */,
-				CDD66C1F2254D84200B7B8D1 /* Frameworks */,
-				CDD66C202254D84200B7B8D1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CDD66C242254D84200B7B8D1 /* PBXTargetDependency */,
-			);
-			name = SchoolOfScienceTests;
-			productName = SchoolOfScienceTests;
-			productReference = CDD66C222254D84200B7B8D1 /* SchoolOfScienceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CDD66C2C2254D84200B7B8D1 /* SchoolOfScienceUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDD66C3C2254D84200B7B8D1 /* Build configuration list for PBXNativeTarget "SchoolOfScienceUITests" */;
-			buildPhases = (
-				CDD66C292254D84200B7B8D1 /* Sources */,
-				CDD66C2A2254D84200B7B8D1 /* Frameworks */,
-				CDD66C2B2254D84200B7B8D1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CDD66C2F2254D84200B7B8D1 /* PBXTargetDependency */,
-			);
-			name = SchoolOfScienceUITests;
-			productName = SchoolOfScienceUITests;
-			productReference = CDD66C2D2254D84200B7B8D1 /* SchoolOfScienceUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -279,14 +182,6 @@
 				TargetAttributes = {
 					CDD66C0D2254D83F00B7B8D1 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					CDD66C212254D84200B7B8D1 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = CDD66C0D2254D83F00B7B8D1;
-					};
-					CDD66C2C2254D84200B7B8D1 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = CDD66C0D2254D83F00B7B8D1;
 					};
 				};
 			};
@@ -304,8 +199,6 @@
 			projectRoot = "";
 			targets = (
 				CDD66C0D2254D83F00B7B8D1 /* SchoolOfScience */,
-				CDD66C212254D84200B7B8D1 /* SchoolOfScienceTests */,
-				CDD66C2C2254D84200B7B8D1 /* SchoolOfScienceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,20 +212,6 @@
 				CDD78CC3225796F500823E06 /* GoogleService-Info.plist in Resources */,
 				CDD66C192254D84100B7B8D1 /* Assets.xcassets in Resources */,
 				CDD66C172254D83F00B7B8D1 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDD66C202254D84200B7B8D1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDD66C2B2254D84200B7B8D1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,36 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDD66C1E2254D84200B7B8D1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDD66C272254D84200B7B8D1 /* SchoolOfScienceTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDD66C292254D84200B7B8D1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDD66C322254D84200B7B8D1 /* SchoolOfScienceUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CDD66C242254D84200B7B8D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CDD66C0D2254D83F00B7B8D1 /* SchoolOfScience */;
-			targetProxy = CDD66C232254D84200B7B8D1 /* PBXContainerItemProxy */;
-		};
-		CDD66C2F2254D84200B7B8D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CDD66C0D2254D83F00B7B8D1 /* SchoolOfScience */;
-			targetProxy = CDD66C2E2254D84200B7B8D1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDD66C152254D83F00B7B8D1 /* Main.storyboard */ = {
@@ -638,84 +488,6 @@
 			};
 			name = Release;
 		};
-		CDD66C3A2254D84200B7B8D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SchoolOfScienceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Jacky.SchoolOfScienceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SchoolOfScience.app/SchoolOfScience";
-			};
-			name = Debug;
-		};
-		CDD66C3B2254D84200B7B8D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SchoolOfScienceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Jacky.SchoolOfScienceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SchoolOfScience.app/SchoolOfScience";
-			};
-			name = Release;
-		};
-		CDD66C3D2254D84200B7B8D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SchoolOfScienceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Jacky.SchoolOfScienceUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SchoolOfScience;
-			};
-			name = Debug;
-		};
-		CDD66C3E2254D84200B7B8D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SchoolOfScienceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Jacky.SchoolOfScienceUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SchoolOfScience;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -733,24 +505,6 @@
 			buildConfigurations = (
 				CDD66C372254D84200B7B8D1 /* Debug */,
 				CDD66C382254D84200B7B8D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDD66C392254D84200B7B8D1 /* Build configuration list for PBXNativeTarget "SchoolOfScienceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDD66C3A2254D84200B7B8D1 /* Debug */,
-				CDD66C3B2254D84200B7B8D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDD66C3C2254D84200B7B8D1 /* Build configuration list for PBXNativeTarget "SchoolOfScienceUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDD66C3D2254D84200B7B8D1 /* Debug */,
-				CDD66C3E2254D84200B7B8D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

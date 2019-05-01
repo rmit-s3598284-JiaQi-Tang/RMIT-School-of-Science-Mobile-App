@@ -17,12 +17,12 @@ struct Welcome: Codable {
 
 struct Feed: Codable {
     let feedID: String
-    let createdDate: Int
+    let createdDate: Double
     let news: String?
     let authorID: AuthorID
     let title: String?
     let department: String
-    let updatedDate: Int
+    let updatedDate: Double
     let category: Category
     let deadlineDate, eventTagline: JSONNull?
     let sendNotification: Bool
