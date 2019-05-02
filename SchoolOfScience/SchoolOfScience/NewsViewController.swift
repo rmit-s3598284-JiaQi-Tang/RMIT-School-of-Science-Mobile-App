@@ -81,6 +81,32 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         return CGFloat(125)
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        //convert date
+        let timeInterval = self.existFeeds[indexPath.row].createdDate/1000
+        let myDate = Date(timeIntervalSince1970: Double(timeInterval))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-yyyy"
+        let stringDate = formatter.string(from: myDate as Date)
+
+        //convert imageURL
+        var image = UIImage.init(named: "rmit-building80")
+        if let imageURL = self.existFeeds[indexPath.row].imageurl {
+
+            let url = URL(string: imageURL)
+            if let url = url {
+                let data = try? Data(contentsOf: url)
+                if let imageData = data {
+                    image = UIImage(data: imageData)
+                }
+            }
+        }
+        NewsModel.upDateDisplayingNews(title: existFeeds[indexPath.row].title!, content: existFeeds[indexPath.row].news!, date: stringDate, image: image!)
+
+        performSegue(withIdentifier: "showContentSegue", sender: nil)
+    }
+
     @IBAction func generalButtonTapped(_ sender: Any) {
         existFeeds.removeAll()
         JsonManager.getFeeds(department: "GENERAL") {feeds in

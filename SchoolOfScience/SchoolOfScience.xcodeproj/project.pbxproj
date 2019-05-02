@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4ABAA6D5131539BED5F635C0 /* Pods_SchoolOfScience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */; };
+		CD88649D227AA97800518C0A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649C227AA97800518C0A /* NewsModel.swift */; };
+		CD88649F227AB77D00518C0A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649E227AB77D00518C0A /* FilterViewController.swift */; };
 		CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */; };
 		CDC01BB2226636CF00FFE2BF /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB1226636CF00FFE2BF /* MonthView.swift */; };
 		CDC01BB42266371A00FFE2BF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB32266371A00FFE2BF /* CalendarView.swift */; };
@@ -34,6 +36,8 @@
 		240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolOfScience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0A3D376C1B92FBF3633FD5 /* Pods_SchoolOfScienceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolOfScienceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		889C276F8F3D05E70A3F4B73 /* Pods-SchoolOfScience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.release.xcconfig"; sourceTree = "<group>"; };
+		CD88649C227AA97800518C0A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		CD88649E227AB77D00518C0A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		CDC01BB1226636CF00FFE2BF /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		CDC01BB32266371A00FFE2BF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				CDD78CC82258461100823E06 /* SignUpViewController.swift */,
 				CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */,
 				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
+				CD88649C227AA97800518C0A /* NewsModel.swift */,
+				CD88649E227AB77D00518C0A /* FilterViewController.swift */,
 			);
 			path = SchoolOfScience;
 			sourceTree = "<group>";
@@ -304,6 +310,8 @@
 				CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */,
 				CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */,
 				CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */,
+				CD88649D227AA97800518C0A /* NewsModel.swift in Sources */,
+				CD88649F227AB77D00518C0A /* FilterViewController.swift in Sources */,
 				CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */,
 				CDD66C122254D83F00B7B8D1 /* AppDelegate.swift in Sources */,
 				CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */,
