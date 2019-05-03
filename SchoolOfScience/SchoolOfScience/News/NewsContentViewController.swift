@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class ContentViewController: UIViewController {
+class NewsContentViewController: UIViewController {
 
     @IBOutlet weak var tittleLabel: UILabel!
     @IBOutlet weak var imageUIImageView: UIImageView!

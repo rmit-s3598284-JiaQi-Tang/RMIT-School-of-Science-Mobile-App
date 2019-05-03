@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4ABAA6D5131539BED5F635C0 /* Pods_SchoolOfScience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */; };
 		CD88649D227AA97800518C0A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649C227AA97800518C0A /* NewsModel.swift */; };
-		CD88649F227AB77D00518C0A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649E227AB77D00518C0A /* FilterViewController.swift */; };
+		CD88649F227AB77D00518C0A /* DeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649E227AB77D00518C0A /* DeadlineViewController.swift */; };
 		CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */; };
 		CDC01BB2226636CF00FFE2BF /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB1226636CF00FFE2BF /* MonthView.swift */; };
 		CDC01BB42266371A00FFE2BF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB32266371A00FFE2BF /* CalendarView.swift */; };
@@ -22,12 +22,12 @@
 		CDD78CC92258461100823E06 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CC82258461100823E06 /* SignUpViewController.swift */; };
 		CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */; };
 		CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCC225859CE00823E06 /* SettingsViewController.swift */; };
-		CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCE225859FF00823E06 /* CalendarViewController.swift */; };
+		CDD78CCF225859FF00823E06 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCE225859FF00823E06 /* EventsViewController.swift */; };
 		CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EE3C226D873800208613 /* JsonModels.swift */; };
 		CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EE3E226D878E00208613 /* JsonManager.swift */; };
 		CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FD22565E1700382985 /* NewsViewController.swift */; };
 		CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FF22565E4900382985 /* NewsTableViewCell.swift */; };
-		CDF37A02225662A800382985 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* ContentViewController.swift */; };
+		CDF37A02225662A800382985 /* NewsContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* NewsContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		4F0A3D376C1B92FBF3633FD5 /* Pods_SchoolOfScienceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolOfScienceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		889C276F8F3D05E70A3F4B73 /* Pods-SchoolOfScience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.release.xcconfig"; sourceTree = "<group>"; };
 		CD88649C227AA97800518C0A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
-		CD88649E227AB77D00518C0A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CD88649E227AB77D00518C0A /* DeadlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineViewController.swift; sourceTree = "<group>"; };
 		CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		CDC01BB1226636CF00FFE2BF /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		CDC01BB32266371A00FFE2BF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -52,12 +52,12 @@
 		CDD78CC82258461100823E06 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowrdViewController.swift; sourceTree = "<group>"; };
 		CDD78CCC225859CE00823E06 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		CDD78CCE225859FF00823E06 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		CDD78CCE225859FF00823E06 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		CDF0EE3C226D873800208613 /* JsonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModels.swift; sourceTree = "<group>"; };
 		CDF0EE3E226D878E00208613 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		CDF379FD22565E1700382985 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CDF379FF22565E4900382985 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		CDF37A01225662A800382985 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		CDF37A01225662A800382985 /* NewsContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +82,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD8864A1227C9FB100518C0A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CDD66C132254D83F00B7B8D1 /* LoginViewController.swift */,
+				CDD78CC82258461100823E06 /* SignUpViewController.swift */,
+				CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CD8864A2227C9FC900518C0A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CDF379FD22565E1700382985 /* NewsViewController.swift */,
+				CDF37A01225662A800382985 /* NewsContentViewController.swift */,
+				CDF379FF22565E4900382985 /* NewsTableViewCell.swift */,
+				CD88649C227AA97800518C0A /* NewsModel.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CD8864A3227C9FD500518C0A /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				CDD78CCE225859FF00823E06 /* EventsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		CD8864A4227C9FDC00518C0A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		CDC01BB52266384D00FFE2BF /* Claendar */ = {
 			isa = PBXGroup;
 			children = (
-				CDD78CCE225859FF00823E06 /* CalendarViewController.swift */,
+				CD88649E227AB77D00518C0A /* DeadlineViewController.swift */,
 				CDC01BB32266371A00FFE2BF /* CalendarView.swift */,
 				CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */,
 				CDC01BB1226636CF00FFE2BF /* MonthView.swift */,
@@ -116,21 +153,16 @@
 		CDD66C102254D83F00B7B8D1 /* SchoolOfScience */ = {
 			isa = PBXGroup;
 			children = (
+				CD8864A4227C9FDC00518C0A /* Settings */,
+				CD8864A3227C9FD500518C0A /* Events */,
+				CD8864A2227C9FC900518C0A /* News */,
+				CD8864A1227C9FB100518C0A /* Authentication */,
 				CDD78CC2225796F500823E06 /* GoogleService-Info.plist */,
 				CDD66C112254D83F00B7B8D1 /* AppDelegate.swift */,
 				CDD66C152254D83F00B7B8D1 /* Main.storyboard */,
 				CDD66C182254D84100B7B8D1 /* Assets.xcassets */,
 				CDD66C1A2254D84100B7B8D1 /* LaunchScreen.storyboard */,
 				CDD66C1D2254D84100B7B8D1 /* Info.plist */,
-				CDF379FD22565E1700382985 /* NewsViewController.swift */,
-				CDF379FF22565E4900382985 /* NewsTableViewCell.swift */,
-				CDF37A01225662A800382985 /* ContentViewController.swift */,
-				CDD66C132254D83F00B7B8D1 /* LoginViewController.swift */,
-				CDD78CC82258461100823E06 /* SignUpViewController.swift */,
-				CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */,
-				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
-				CD88649C227AA97800518C0A /* NewsModel.swift */,
-				CD88649E227AB77D00518C0A /* FilterViewController.swift */,
 			);
 			path = SchoolOfScience;
 			sourceTree = "<group>";
@@ -304,17 +336,17 @@
 				CDC01BB2226636CF00FFE2BF /* MonthView.swift in Sources */,
 				CDD78CC92258461100823E06 /* SignUpViewController.swift in Sources */,
 				CDC01BB42266371A00FFE2BF /* CalendarView.swift in Sources */,
-				CDF37A02225662A800382985 /* ContentViewController.swift in Sources */,
+				CDF37A02225662A800382985 /* NewsContentViewController.swift in Sources */,
 				CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */,
 				CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */,
 				CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */,
 				CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */,
 				CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */,
 				CD88649D227AA97800518C0A /* NewsModel.swift in Sources */,
-				CD88649F227AB77D00518C0A /* FilterViewController.swift in Sources */,
+				CD88649F227AB77D00518C0A /* DeadlineViewController.swift in Sources */,
 				CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */,
 				CDD66C122254D83F00B7B8D1 /* AppDelegate.swift in Sources */,
-				CDD78CCF225859FF00823E06 /* CalendarViewController.swift in Sources */,
+				CDD78CCF225859FF00823E06 /* EventsViewController.swift in Sources */,
 				CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */,
 				CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */,
 			);

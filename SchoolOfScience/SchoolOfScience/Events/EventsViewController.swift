@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class CalendarViewController: UIViewController {
+class EventsViewController: UIViewController {
 //
 //    let calenderView: CalenderView = {
 //        let v=CalenderView(theme: MyTheme.dark)

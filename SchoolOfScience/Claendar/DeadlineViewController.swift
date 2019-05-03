@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterViewController: UIViewController {
+class DeadlineViewController: UIViewController {
 
 
     let calenderView: CalenderView = {
@@ -41,7 +41,7 @@ class FilterViewController: UIViewController {
         calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
     }
 
-    @IBAction func backButtonTapped(_ sender: Any) {
+    @IBAction func LogoTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
 }
