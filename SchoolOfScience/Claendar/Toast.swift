@@ -93,14 +93,14 @@ extension UIView {
         self.showToast(toast: toast!, duration: duration, position: position)
     }
 
-    func showToast(toast toast: UIView) {
+    func showToast(toast: UIView) {
         self.showToast(toast: toast, duration: HRToastDefaultDuration, position: HRToastPositionDefault as AnyObject)
     }
 
-    func showToast(toast toast: UIView, duration: Double, position: AnyObject) {
+    func showToast(toast: UIView, duration: Double, position: AnyObject) {
         let existToast = objc_getAssociatedObject(self, &HRToastView) as! UIView?
         if existToast != nil {
-            if let timer: Timer = objc_getAssociatedObject(existToast, &HRToastTimer) as? Timer {
+            if let timer: Timer = objc_getAssociatedObject(existToast ?? "Loading..", &HRToastTimer) as? Timer {
                 timer.invalidate();
             }
             self.hideToast(toast: existToast!, force: false);
@@ -110,7 +110,7 @@ extension UIView {
         toast.alpha = 0.0
 
         if HRToastHidesOnTap {
-            let tapRecognizer = UITapGestureRecognizer(target: toast, action: Selector("handleToastTapped:"))
+            let tapRecognizer = UITapGestureRecognizer(target: toast, action: Selector(("handleToastTapped:")))
             toast.addGestureRecognizer(tapRecognizer)
             toast.isUserInteractionEnabled = true;
             toast.isExclusiveTouch = true;
@@ -125,7 +125,7 @@ extension UIView {
                                     toast.alpha = 1.0
         },
                                    completion: { (finished: Bool) in
-                                    let timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: Selector("toastTimerDidFinish:"), userInfo: toast, repeats: false)
+                                    let timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: Selector(("toastTimerDidFinish:")), userInfo: toast, repeats: false)
                                     objc_setAssociatedObject(toast, &HRToastTimer, timer, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         })
     }
@@ -165,7 +165,7 @@ extension UIView {
             activityIndicatorView.frame.origin.y -= 10
             let activityMessageLabel = UILabel(frame: CGRect(activityView.bounds.origin.x, (activityIndicatorView.frame.origin.y + activityIndicatorView.frame.size.height + 10), activityView.bounds.size.width, 20))
             activityMessageLabel.textColor = UIColor.white
-            activityMessageLabel.font = (msg.characters.count<=10) ? UIFont(name:activityMessageLabel.font.fontName, size: 16) : UIFont(name:activityMessageLabel.font.fontName, size: 13)
+            activityMessageLabel.font = (msg.count<=10) ? UIFont(name:activityMessageLabel.font.fontName, size: 16) : UIFont(name:activityMessageLabel.font.fontName, size: 13)
             activityMessageLabel.textAlignment = .center
             activityMessageLabel.text = msg
             activityView.addSubview(activityMessageLabel)
@@ -203,11 +203,11 @@ extension UIView {
     /*
      *  private methods (helper)
      */
-    func hideToast(toast toast: UIView) {
+    func hideToast(toast: UIView) {
         self.hideToast(toast: toast, force: false);
     }
 
-    func hideToast(toast toast: UIView, force: Bool) {
+    func hideToast(toast: UIView, force: Bool) {
         let completeClosure = { (finish: Bool) -> () in
             toast.removeFromSuperview()
             objc_setAssociatedObject(self, &HRToastTimer, nil, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -400,5 +400,17 @@ extension CGSize{
 extension CGPoint{
     init(_ x:CGFloat,_ y:CGFloat) {
         self.init(x:x,y:y)
+    }
+}
+
+extension UIViewController{
+    func showLoading(){
+        self.view.makeToastActivityWithMessage(message: "Loading…")
+        self.view.isUserInteractionEnabled = false
+    }
+
+    func clearLoading(){
+        self.view.hideToastActivity()
+        self.view.isUserInteractionEnabled = true
     }
 }

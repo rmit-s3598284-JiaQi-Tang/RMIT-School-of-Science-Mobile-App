@@ -317,7 +317,7 @@
                                 <color key="separatorColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="123" id="eXx-tC-JaH" customClass="NewsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="123" id="eXx-tC-JaH" customClass="EventsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXx-tC-JaH" id="cWa-wM-cf7">
@@ -365,15 +365,15 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="iHC-0I-oxu" id="jSy-fO-sg7"/>
-                                            <outlet property="tittleLabel" destination="2bL-Sl-FN3" id="epb-vZ-HxO"/>
+                                            <outlet property="tittleLabel" destination="2bL-Sl-FN3" id="R68-oi-Ly6"/>
                                             <outlet property="tittleUIImage" destination="kJ3-x7-vyJ" id="y4J-8d-ImH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="xiw-Fn-CGe" id="2cU-fC-YvA"/>
-                                    <outlet property="delegate" destination="xiw-Fn-CGe" id="H1e-ud-csV"/>
+                                    <outlet property="dataSource" destination="1V1-oW-OLw" id="cr8-Ww-pK6"/>
+                                    <outlet property="delegate" destination="1V1-oW-OLw" id="1wY-qq-A1S"/>
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9CG-fJ-X7J">
@@ -388,6 +388,7 @@
                                         <state key="normal" title="General"/>
                                         <connections>
                                             <action selector="generalButtonTapped:" destination="xiw-Fn-CGe" eventType="touchUpInside" id="Pnr-2i-7fa"/>
+                                            <action selector="generalButtonTapped:" destination="1V1-oW-OLw" eventType="touchUpInside" id="tZ7-L7-bbh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtA-jS-yvv">
@@ -396,6 +397,7 @@
                                         <state key="normal" title="Research"/>
                                         <connections>
                                             <action selector="researchButtonTapped:" destination="xiw-Fn-CGe" eventType="touchUpInside" id="UU2-s6-wGx"/>
+                                            <action selector="researchButtonTapped:" destination="1V1-oW-OLw" eventType="touchUpInside" id="Wa2-Dc-tet"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ty-uM-Nof">
@@ -407,6 +409,7 @@
                                         <state key="normal" title="Learning"/>
                                         <connections>
                                             <action selector="learningButtonTapped:" destination="xiw-Fn-CGe" eventType="touchUpInside" id="pse-7p-XgJ"/>
+                                            <action selector="learningButtonTapped:" destination="1V1-oW-OLw" eventType="touchUpInside" id="uJP-B3-TjY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -523,6 +526,18 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="events-25" id="n7w-yK-zaT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="EventsTableView" destination="tIV-0O-cQe" id="Iy4-Bl-zg3"/>
+                        <outlet property="generalButton" destination="l8X-la-Ed0" id="KKz-PG-MTk"/>
+                        <outlet property="learningButton" destination="4Ty-uM-Nof" id="vp1-RH-i7m"/>
+                        <outlet property="pageControl" destination="IDb-Cf-5En" id="LqI-H6-gwZ"/>
+                        <outlet property="researchButton" destination="CtA-jS-yvv" id="hes-Af-mg9"/>
+                        <outlet property="scrollView" destination="UMh-HO-rvC" id="d6Z-KG-iVb"/>
+                        <outlet property="subDateLabel" destination="bwF-3R-kQM" id="vo6-DO-wVT"/>
+                        <outlet property="subTitleLabel" destination="m3T-QN-Vts" id="xcJ-EL-DMr"/>
+                        <outlet property="subView" destination="fVt-xN-Oyw" id="1U3-XU-upG"/>
+                        <segue destination="67G-ZP-QRK" kind="show" identifier="showEventContentSegue" id="3yA-MA-CMb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvv-hj-SqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1034,7 +1049,7 @@
                         <outlet property="subDateLabel" destination="vTu-qf-Ck4" id="DEa-8a-w6y"/>
                         <outlet property="subTitleLabel" destination="N6e-Gs-wBH" id="R6J-e1-MZw"/>
                         <outlet property="subView" destination="3sW-y8-VwT" id="Dg4-hw-Czq"/>
-                        <segue destination="aiG-NJ-Rqc" kind="show" identifier="showContentSegue" id="Uae-LZ-hmM"/>
+                        <segue destination="aiG-NJ-Rqc" kind="show" identifier="showNewsContentSegue" id="Uae-LZ-hmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrm-vS-CCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1124,7 +1139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sym-8L-dVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.8" y="-967.4662668665668"/>
+            <point key="canvasLocation" x="1857" y="-967"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xfn-gH-xTa">
@@ -1189,7 +1204,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5W-Ug-X4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="27"/>
+            <point key="canvasLocation" x="2815" y="-967"/>
+        </scene>
+        <!--Events Content View Controller-->
+        <scene sceneID="2fA-Zo-t7w">
+            <objects>
+                <viewController id="67G-ZP-QRK" customClass="EventsContentViewController" customModule="SchoolOfScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E4g-eS-U2q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to School of Science" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-Ta-GMG">
+                                <rect key="frame" x="28" y="42" width="319" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="JAR-vV-9Ek"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="58" id="VS8-uH-bPA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-fP-Ncu">
+                                <rect key="frame" x="28" y="415" width="319" height="218"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eX-jQ-K4H">
+                                <rect key="frame" x="16" y="-6" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="MI8-gB-FW7"/>
+                                    <constraint firstAttribute="height" constant="30" id="hhg-mr-4uE"/>
+                                </constraints>
+                                <state key="normal" image="baseline_arrow_back_white_24dp"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="67G-ZP-QRK" eventType="touchUpInside" id="b3g-oc-Ghj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-building80" translatesAutoresizingMaskIntoConstraints="NO" id="POR-92-P53">
+                                <rect key="frame" x="28" y="167" width="319" height="206"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="Ate-M5-5fj"/>
+                                    <constraint firstAttribute="height" constant="206" id="t9c-Ub-t2z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="01-Apl-2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMo-xZ-aWD">
+                                <rect key="frame" x="120" y="108" width="134" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="kHG-Ap-1OC"/>
+                                    <constraint firstAttribute="height" constant="35" id="uYq-Kx-OaI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="8lv-fP-Ncu" firstAttribute="leading" secondItem="2vf-Ec-Z9x" secondAttribute="leading" constant="28" id="19E-9Z-3T0"/>
+                            <constraint firstItem="8lv-fP-Ncu" firstAttribute="centerX" secondItem="E4g-eS-U2q" secondAttribute="centerX" id="2c3-C2-zMV"/>
+                            <constraint firstItem="8lv-fP-Ncu" firstAttribute="top" secondItem="POR-92-P53" secondAttribute="bottom" constant="42" id="PBa-fx-dmN"/>
+                            <constraint firstItem="POR-92-P53" firstAttribute="top" secondItem="MMo-xZ-aWD" secondAttribute="bottom" constant="30" id="Qam-ID-cyp"/>
+                            <constraint firstItem="2vf-Ec-Z9x" firstAttribute="bottom" secondItem="8lv-fP-Ncu" secondAttribute="bottom" constant="34" id="jPl-sn-93m"/>
+                            <constraint firstItem="h6W-Ta-GMG" firstAttribute="top" secondItem="2eX-jQ-K4H" secondAttribute="bottom" constant="18" id="lpQ-2T-0EU"/>
+                            <constraint firstItem="h6W-Ta-GMG" firstAttribute="centerX" secondItem="E4g-eS-U2q" secondAttribute="centerX" id="lyW-EM-CA9"/>
+                            <constraint firstItem="MMo-xZ-aWD" firstAttribute="firstBaseline" secondItem="h6W-Ta-GMG" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="qU1-hj-E6S"/>
+                            <constraint firstItem="2eX-jQ-K4H" firstAttribute="centerX" secondItem="E4g-eS-U2q" secondAttribute="centerX" constant="-156.5" id="qcX-tb-xpJ"/>
+                            <constraint firstItem="POR-92-P53" firstAttribute="centerX" secondItem="E4g-eS-U2q" secondAttribute="centerX" id="rFK-sg-DJb"/>
+                            <constraint firstItem="2vf-Ec-Z9x" firstAttribute="trailing" secondItem="8lv-fP-Ncu" secondAttribute="trailing" constant="28" id="wqb-Rv-UmG"/>
+                            <constraint firstItem="MMo-xZ-aWD" firstAttribute="centerX" secondItem="E4g-eS-U2q" secondAttribute="centerX" id="x5q-Kd-S02"/>
+                            <constraint firstItem="h6W-Ta-GMG" firstAttribute="centerY" secondItem="E4g-eS-U2q" secondAttribute="centerY" constant="-262.5" id="y5k-4Y-dFC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2vf-Ec-Z9x"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="8lv-fP-Ncu" id="CjW-2I-FT1"/>
+                        <outlet property="dateLabel" destination="MMo-xZ-aWD" id="t47-X2-dkA"/>
+                        <outlet property="imageUIImageView" destination="POR-92-P53" id="IFe-yY-GuS"/>
+                        <outlet property="tittleLabel" destination="h6W-Ta-GMG" id="8p4-qL-sOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1x-s3-THd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2961" y="27"/>
         </scene>
     </scenes>
     <resources>

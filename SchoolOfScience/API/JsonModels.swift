@@ -21,10 +21,11 @@ struct Feed: Codable {
     let news: String?
     let authorID: AuthorID
     let title: String?
-    let department: String
+    let department: Department
     let updatedDate: Double
     let category: Category
-    let deadlineDate, eventTagline: JSONNull?
+    let deadlineDate: Double?
+    let eventTagline: String?
     let sendNotification: Bool
     let imageurl: String?
     let deleted: Bool
@@ -42,32 +43,14 @@ enum AuthorID: String, Codable {
 }
 
 enum Category: String, Codable {
+    case deadlines = "DEADLINES"
+    case events = "EVENTS"
     case news = "NEWS"
 }
 
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
+enum Department: String, Codable {
+    case all = "ALL"
+    case general = "GENERAL"
+    case learning = "LEARNING"
+    case research = "RESEARCH"
 }
