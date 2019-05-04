@@ -138,6 +138,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         cell?.backgroundColor=Colors.darkRed
         let lbl = cell?.subviews[1] as! UILabel
         lbl.textColor=UIColor.white
+        let monthLabel = monthView.subviews[0] as! UILabel
+        print("\(lbl.text!) \(monthLabel.text!)")
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -193,14 +195,14 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         monthView.topAnchor.constraint(equalTo: topAnchor).isActive=true
         monthView.leftAnchor.constraint(equalTo: leftAnchor).isActive=true
         monthView.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
-        monthView.heightAnchor.constraint(equalToConstant: 35).isActive=true
+        monthView.heightAnchor.constraint(equalToConstant: 50).isActive=true
         monthView.delegate=self
 
         addSubview(weekdaysView)
         weekdaysView.topAnchor.constraint(equalTo: monthView.bottomAnchor).isActive=true
         weekdaysView.leftAnchor.constraint(equalTo: leftAnchor).isActive=true
         weekdaysView.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
-        weekdaysView.heightAnchor.constraint(equalToConstant: 30).isActive=true
+        weekdaysView.heightAnchor.constraint(equalToConstant: 50).isActive=true
 
         addSubview(myCollectionView)
         myCollectionView.topAnchor.constraint(equalTo: weekdaysView.bottomAnchor, constant: 0).isActive=true

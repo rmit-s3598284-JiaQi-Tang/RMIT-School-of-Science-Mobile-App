@@ -10,6 +10,8 @@
 		4ABAA6D5131539BED5F635C0 /* Pods_SchoolOfScience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */; };
 		CD88649D227AA97800518C0A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649C227AA97800518C0A /* NewsModel.swift */; };
 		CD88649F227AB77D00518C0A /* DeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649E227AB77D00518C0A /* DeadlineViewController.swift */; };
+		CD8864A6227CB3BD00518C0A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8864A5227CB3BD00518C0A /* ContactsViewController.swift */; };
+		CD8864AF227DDE7B00518C0A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8864AE227DDE7B00518C0A /* Toast.swift */; };
 		CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */; };
 		CDC01BB2226636CF00FFE2BF /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB1226636CF00FFE2BF /* MonthView.swift */; };
 		CDC01BB42266371A00FFE2BF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB32266371A00FFE2BF /* CalendarView.swift */; };
@@ -38,6 +40,8 @@
 		889C276F8F3D05E70A3F4B73 /* Pods-SchoolOfScience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.release.xcconfig"; sourceTree = "<group>"; };
 		CD88649C227AA97800518C0A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		CD88649E227AB77D00518C0A /* DeadlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineViewController.swift; sourceTree = "<group>"; };
+		CD8864A5227CB3BD00518C0A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		CD8864AE227DDE7B00518C0A /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		CDC01BB1226636CF00FFE2BF /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		CDC01BB32266371A00FFE2BF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD78CCC225859CE00823E06 /* SettingsViewController.swift */,
+				CD8864A5227CB3BD00518C0A /* ContactsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				CDC01BB32266371A00FFE2BF /* CalendarView.swift */,
 				CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */,
 				CDC01BB1226636CF00FFE2BF /* MonthView.swift */,
+				CD8864AE227DDE7B00518C0A /* Toast.swift */,
 			);
 			path = Claendar;
 			sourceTree = "<group>";
@@ -337,8 +343,10 @@
 				CDD78CC92258461100823E06 /* SignUpViewController.swift in Sources */,
 				CDC01BB42266371A00FFE2BF /* CalendarView.swift in Sources */,
 				CDF37A02225662A800382985 /* NewsContentViewController.swift in Sources */,
+				CD8864A6227CB3BD00518C0A /* ContactsViewController.swift in Sources */,
 				CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */,
 				CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */,
+				CD8864AF227DDE7B00518C0A /* Toast.swift in Sources */,
 				CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */,
 				CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */,
 				CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */,

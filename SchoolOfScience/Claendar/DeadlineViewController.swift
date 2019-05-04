@@ -28,10 +28,10 @@ class DeadlineViewController: UIViewController {
         self.view.backgroundColor=Style.bgColor
 
         view.addSubview(calenderView)
-        calenderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive=true
+        calenderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 240).isActive=true
         calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive=true
         calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
-        calenderView.heightAnchor.constraint(equalToConstant: 365).isActive=true
+        calenderView.heightAnchor.constraint(equalToConstant: 400).isActive=true
 
     }
 
