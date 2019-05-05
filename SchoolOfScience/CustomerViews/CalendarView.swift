@@ -126,6 +126,67 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         let cell=collectionView.cellForItem(at: indexPath)
         let lbl = cell?.subviews[1] as! UILabel
         print("\(lbl.text!) \(currentMonthIndex) \(currentYear)")
+
+        //present content UIViewcontroller
+        if cell?.backgroundColor == Colors.darkRed {
+            self.showLoading()
+            JsonManager.getDeadLineFeeds() {feeds in
+                DispatchQueue.main.async {
+                    guard let feeds = feeds else { return }
+                    for feed in feeds {
+                        guard let deadlineDate = feed.deadlineDate else { return }
+                        if(self.getNumberDateFromSeconds(seconds: deadlineDate) == "\(lbl.text!)-\(self.currentMonthIndex)-\(self.currentYear)") {
+                            print(feed.title!)
+                            DeadlineModel.upDateDisplayingDeadline(title: feed.title!, content: feed.news!, date: self.getNumberDateFromSeconds(seconds: deadlineDate), image: self.getPictureFromURL(url: feed.imageurl)!)
+                        }
+                    }
+                    let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+                    let vc: DeadlineContentViewController = storyboard.instantiateViewController(withIdentifier: "deadlineContentViewController") as! DeadlineContentViewController
+                    let currentController = self.getCurrentViewController()
+                    currentController?.present(vc, animated: false, completion: nil)
+                    self.clearLoading()
+                }
+            }
+        }
+
+    }
+
+    private func getCurrentViewController() -> UIViewController? {
+
+        if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+            var currentController: UIViewController! = rootController
+            while( currentController.presentedViewController != nil ) {
+                currentController = currentController.presentedViewController
+            }
+            return currentController
+        }
+        return nil
+
+    }
+
+    private func getPictureFromURL(url: String?) -> UIImage? {
+        if let imageURL = url {
+            let url = URL(string: imageURL)
+            if let url = url {
+                let data = try? Data(contentsOf: url)
+                if let imageData = data {
+                    return UIImage(data: imageData)
+                } else {
+                    return UIImage.init(named: "rmit-building80")
+                }
+            } else {
+                return UIImage.init(named: "rmit-building80")
+            }
+        } else {
+            return UIImage.init(named: "rmit-building80")
+        }
+    }
+    private func getNumberDateFromSeconds(seconds: Int) -> String {
+        let timeInterval = seconds/1000
+        let myDate = Date(timeIntervalSince1970: Double(timeInterval))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d-M-yyyy"
+        return formatter.string(from: myDate as Date)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

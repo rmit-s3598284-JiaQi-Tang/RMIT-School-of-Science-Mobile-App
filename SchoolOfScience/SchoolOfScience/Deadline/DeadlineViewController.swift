@@ -37,6 +37,7 @@ class DeadlineViewController: UIViewController {
         //add highlight action to left and right button
         calenderView.monthView.btnLeft.addTarget(self, action: #selector(newBtnLeftRightAction(sender:)), for: .touchUpInside)
         calenderView.monthView.btnRight.addTarget(self, action: #selector(newBtnLeftRightAction(sender:)), for: .touchUpInside)
+
     }
 
 

@@ -414,3 +414,15 @@ extension UIViewController{
         self.view.isUserInteractionEnabled = true
     }
 }
+
+extension UIView{
+    func showLoading(){
+        self.makeToastActivityWithMessage(message: "Loading…")
+        self.isUserInteractionEnabled = false
+    }
+
+    func clearLoading(){
+        self.hideToastActivity()
+        self.isUserInteractionEnabled = true
+    }
+}
