@@ -151,7 +151,7 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CDC01BB52266384D00FFE2BF /* Claendar */ = {
+		CDC01BB52266384D00FFE2BF /* CustomerViews */ = {
 			isa = PBXGroup;
 			children = (
 				CDC01BB32266371A00FFE2BF /* CalendarView.swift */,
@@ -159,7 +159,7 @@
 				CDC01BB1226636CF00FFE2BF /* MonthView.swift */,
 				CD8864AE227DDE7B00518C0A /* Toast.swift */,
 			);
-			path = Claendar;
+			path = CustomerViews;
 			sourceTree = "<group>";
 		};
 		CDD66C052254D83E00B7B8D1 = {
@@ -168,7 +168,7 @@
 				CD8864B1227DE96C00518C0A /* Helpers */,
 				CDF0EE3B226D871100208613 /* API */,
 				CDD66C102254D83F00B7B8D1 /* SchoolOfScience */,
-				CDC01BB52266384D00FFE2BF /* Claendar */,
+				CDC01BB52266384D00FFE2BF /* CustomerViews */,
 				CDD66C0F2254D83F00B7B8D1 /* Products */,
 				F679AF34C908036627D76745 /* Pods */,
 				213593D0051C30CC7EF68BDF /* Frameworks */,

@@ -54,8 +54,8 @@ class JsonManager {
         }
     }
 
-    public static func getContactsFeeds(department: String, completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?department=\(department)&feedType=DEADLINES&index=0&size=100")
+    public static func getContactsFeeds(completion: @escaping CompletionHandler) {
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getContacts?size=100&index=0")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")
@@ -75,8 +75,8 @@ class JsonManager {
         }
     }
 
-    public static func getDeadLineFeeds(department: String, completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?department=\(department)&feedType=NEWS&index=0&size=100")
+    public static func getDeadLineFeeds(completion: @escaping CompletionHandler) {
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeeds?feedType=DEADLINES&index=0&size=100")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")

@@ -12,19 +12,42 @@ struct Welcome: Codable {
     let code: Int
     let message: String
     let feed: [Feed]
+    let contacts: [Contact]?
     let size: Int
+}
+
+struct Contact: Codable {
+    let contactID: String
+    let emailID: String?
+    let name, phoneNo: String
+    let createdDate, updatedDate: Double
+    let department: Department
+    let deleted: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case contactID = "contactId"
+        case emailID = "emailId"
+        case name, phoneNo, createdDate, updatedDate, department, deleted
+    }
+}
+
+enum Department: String, Codable {
+    case all = "ALL"
+    case general = "GENERAL"
+    case learning = "LEARNING"
+    case research = "RESEARCH"
 }
 
 struct Feed: Codable {
     let feedID: String
-    let createdDate: Double
+    let createdDate: Int
     let news: String?
     let authorID: AuthorID
     let title: String?
     let department: Department
-    let updatedDate: Double
+    let updatedDate: Int
     let category: Category
-    let deadlineDate: Double?
+    let deadlineDate: Int?
     let eventTagline: String?
     let sendNotification: Bool
     let imageurl: String?
@@ -46,11 +69,4 @@ enum Category: String, Codable {
     case deadlines = "DEADLINES"
     case events = "EVENTS"
     case news = "NEWS"
-}
-
-enum Department: String, Codable {
-    case all = "ALL"
-    case general = "GENERAL"
-    case learning = "LEARNING"
-    case research = "RESEARCH"
 }

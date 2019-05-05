@@ -29,12 +29,20 @@ extension UIViewController{
         }
     }
 
-    func getDateFromSeconds(seconds: Double) -> String {
+    func getDateFromSeconds(seconds: Int) -> String {
         let timeInterval = seconds/1000
         let myDate = Date(timeIntervalSince1970: Double(timeInterval))
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MMM-yyyy"
         return formatter.string(from: myDate as Date)
     }
+
+//    func getNumberDateFromSeconds(seconds: Double) -> String {
+//        let timeInterval = seconds/1000
+//        let myDate = Date(timeIntervalSince1970: Double(timeInterval))
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "dd-MM-yyyy"
+//        return formatter.string(from: myDate as Date)
+//    }
 
 }

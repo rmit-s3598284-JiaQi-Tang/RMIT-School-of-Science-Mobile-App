@@ -75,18 +75,6 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         initializeView()
     }
 
-//    func changeTheme() {
-//        myCollectionView.reloadData()
-//
-//        monthView.lblName.textColor = Style.monthViewLblColor
-//        monthView.btnRight.setTitleColor(Style.monthViewBtnRightColor, for: .normal)
-//        monthView.btnLeft.setTitleColor(Style.monthViewBtnLeftColor, for: .normal)
-//
-//        for i in 0..<7 {
-//            (weekdaysView.myStackView.subviews[i] as! UILabel).textColor = Style.weekdaysLblColor
-//        }
-//    }
-
     func initializeView() {
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())
@@ -107,6 +95,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         myCollectionView.delegate=self
         myCollectionView.dataSource=self
         myCollectionView.register(dateCVCell.self, forCellWithReuseIdentifier: "Cell")
+
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -135,18 +124,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor=Colors.darkRed
         let lbl = cell?.subviews[1] as! UILabel
-        lbl.textColor=UIColor.white
-        let monthLabel = monthView.subviews[0] as! UILabel
-        print("\(lbl.text!) \(monthLabel.text!)")
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell=collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor=UIColor.clear
-        let lbl = cell?.subviews[1] as! UILabel
-        lbl.textColor = Style.activeCellLblColor
+        print("\(lbl.text!) \(currentMonthIndex) \(currentYear)")
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
