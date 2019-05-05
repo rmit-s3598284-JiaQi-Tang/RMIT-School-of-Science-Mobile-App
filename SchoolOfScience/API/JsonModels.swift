@@ -11,7 +11,7 @@ import Foundation
 struct Welcome: Codable {
     let code: Int
     let message: String
-    let feed: [Feed]
+    let feed: [Feed]?
     let contacts: [Contact]?
     let size: Int
 }
@@ -19,8 +19,9 @@ struct Welcome: Codable {
 struct Contact: Codable {
     let contactID: String
     let emailID: String?
-    let name, phoneNo: String
-    let createdDate, updatedDate: Double
+    let name: String
+    let phoneNo: String?
+    let createdDate, updatedDate: Int
     let department: Department
     let deleted: Bool
 

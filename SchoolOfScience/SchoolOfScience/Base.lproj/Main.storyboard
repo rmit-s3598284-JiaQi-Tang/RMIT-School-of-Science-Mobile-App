@@ -317,7 +317,7 @@
                                 <color key="separatorColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="123" id="eXx-tC-JaH" customClass="EventsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="123" id="eXx-tC-JaH" customClass="EventsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXx-tC-JaH" id="cWa-wM-cf7">
@@ -785,11 +785,13 @@
                                     <action selector="logoTapped:" destination="Kpe-bI-DPs" eventType="touchUpInside" id="0Uq-uL-7Dg"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wo8-Y7-5h6">
-                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wo8-Y7-5h6">
+                                <rect key="frame" x="0.0" y="165" width="375" height="502"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="180" id="nYf-M6-21a">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsCell" rowHeight="180" id="nYf-M6-21a" customClass="ContactsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nYf-M6-21a" id="lwL-nv-9f3">
@@ -843,7 +845,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="dJx-iJ-kxx"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_email.png" translatesAutoresizingMaskIntoConstraints="NO" id="wpn-gd-uNa">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mail_outline_white_2x" translatesAutoresizingMaskIntoConstraints="NO" id="wpn-gd-uNa">
                                                     <rect key="frame" x="38" y="54" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="G18-wF-yL1"/>
@@ -885,6 +887,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <outlet property="departmentLabel" destination="ZS4-tF-LVZ" id="e3U-yg-hR3"/>
+                                            <outlet property="emailLabel" destination="m8L-ti-znC" id="RAW-OS-B8I"/>
+                                            <outlet property="nameLabel" destination="JT5-0e-qZN" id="MKD-V4-Qdm"/>
+                                            <outlet property="phoneNumberLabel" destination="xeN-Tw-Uhf" id="AKh-ZY-fi1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -892,18 +900,32 @@
                                     <outlet property="delegate" destination="Kpe-bI-DPs" id="C0c-aP-1Vj"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22x-jZ-8qg">
+                                <rect key="frame" x="115" y="106" width="145" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="m9P-Tp-rK4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aOD-Vr-9hb" firstAttribute="bottom" secondItem="wo8-Y7-5h6" secondAttribute="bottom" id="0NR-Bw-YoS"/>
+                            <constraint firstItem="wo8-Y7-5h6" firstAttribute="top" secondItem="22x-jZ-8qg" secondAttribute="bottom" constant="25" id="5GA-tl-izs"/>
+                            <constraint firstItem="22x-jZ-8qg" firstAttribute="centerX" secondItem="jGW-Gt-ek6" secondAttribute="centerX" id="GBA-Vk-YcU"/>
                             <constraint firstItem="5Pj-Gq-Je0" firstAttribute="centerY" secondItem="jGW-Gt-ek6" secondAttribute="centerY" constant="-277.5" id="GPp-f4-ryS"/>
                             <constraint firstItem="aOD-Vr-9hb" firstAttribute="trailing" secondItem="wo8-Y7-5h6" secondAttribute="trailing" id="QDS-YS-48p"/>
-                            <constraint firstItem="wo8-Y7-5h6" firstAttribute="top" secondItem="5Pj-Gq-Je0" secondAttribute="bottom" constant="39" id="eux-3M-RUK"/>
                             <constraint firstItem="5Pj-Gq-Je0" firstAttribute="centerX" secondItem="jGW-Gt-ek6" secondAttribute="centerX" constant="-10.5" id="f1E-bb-mAJ"/>
+                            <constraint firstItem="22x-jZ-8qg" firstAttribute="top" secondItem="5Pj-Gq-Je0" secondAttribute="bottom" constant="25" id="moH-m5-Ucw"/>
                             <constraint firstItem="wo8-Y7-5h6" firstAttribute="leading" secondItem="aOD-Vr-9hb" secondAttribute="leading" id="s9D-vQ-u4m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aOD-Vr-9hb"/>
                     </view>
+                    <connections>
+                        <outlet property="contactsTableView" destination="wo8-Y7-5h6" id="hkt-Ur-Xpc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaD-d4-Kg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -926,7 +948,7 @@
                                 <color key="separatorColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="123" id="Yv4-OL-9zd" customClass="NewsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="123" id="Yv4-OL-9zd" customClass="NewsTableViewCell" customModule="SchoolOfScience" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yv4-OL-9zd" id="eoF-Mc-zQj">
@@ -1473,7 +1495,6 @@
     <resources>
         <image name="baseline_arrow_back_white_24dp" width="48" height="48"/>
         <image name="events-25" width="25" height="25"/>
-        <image name="ic_email.png" width="24" height="24"/>
         <image name="ic_lock_outline_white_2x" width="48" height="48"/>
         <image name="ic_mail_outline_white_2x" width="48" height="48"/>
         <image name="ic_person_outline_white_2x" width="48" height="48"/>
@@ -1488,6 +1509,6 @@
         <image name="spiderLogo" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k8Q-Hp-Tuh"/>
+        <segue reference="nan-xc-htM"/>
     </inferredMetricsTieBreakers>
 </document>

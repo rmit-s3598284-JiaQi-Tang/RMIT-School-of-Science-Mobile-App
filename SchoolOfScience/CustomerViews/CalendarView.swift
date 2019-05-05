@@ -127,7 +127,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         let lbl = cell?.subviews[1] as! UILabel
         print("\(lbl.text!) \(currentMonthIndex) \(currentYear)")
 
-        //present content UIViewcontroller
+        //present deadline content UIViewcontroller
         if cell?.backgroundColor == Colors.darkRed {
             self.showLoading()
             JsonManager.getDeadLineFeeds() {feeds in
