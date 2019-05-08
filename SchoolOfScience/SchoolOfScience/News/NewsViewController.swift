@@ -11,7 +11,9 @@ import Firebase
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
     var existFeeds = [Feed]()
-    var newestFeeds = [Feed]()
+    var newestFeeds = [NewsViewModel]()
+    var existNews = [NewsViewModel]()
+
     var subViewFrame: CGRect = CGRect(x:0 , y: 0, width: 0, height: 0)
     var subTitleLabelFrame: CGRect = CGRect(x:0 , y: 0, width: 0, height: 0)
     var subDateLabelFrame: CGRect = CGRect(x:0 , y: 0, width: 0, height: 0)
@@ -53,15 +55,8 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.newsTableView.reloadData()
                 self.updateScrollView()
@@ -72,7 +67,8 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
-        generalButton.backgroundColor = UIColor.darkGray
+        generalButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
@@ -81,17 +77,15 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return existFeeds.count
+        return existNews.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
 
-        cell.tittleLabel.text = self.existFeeds[indexPath.row].title
-
-        let stringDate = self.getDateFromSeconds(seconds: self.existFeeds[indexPath.row].createdDate)
-        cell.dateLabel.text = stringDate
-        cell.tittleUIImage.image = getPictureFromURL(url: existFeeds[indexPath.row].imageurl)
+        cell.tittleLabel.text = self.existNews[indexPath.row].title
+        cell.dateLabel.text = self.existNews[indexPath.row].date
+        cell.tittleUIImage.image = self.existNews[indexPath.row].image
 
         return cell
     }
@@ -102,13 +96,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        //convert date
-        let stringDate = self.getDateFromSeconds(seconds: self.existFeeds[indexPath.row].createdDate)
-
-        //convert imageURL
-        let image = self.getPictureFromURL(url: self.existFeeds[indexPath.row].imageurl)
-
-        NewsModel.upDateDisplayingNews(title: existFeeds[indexPath.row].title!, content: existFeeds[indexPath.row].news!, date: stringDate, image: image!)
+        NewsModel.upDateDisplayingNews(title: existNews[indexPath.row].title!, content: existNews[indexPath.row].content!, date: existNews[indexPath.row].date, image: existNews[indexPath.row].image)
 
         performSegue(withIdentifier: "showNewsContentSegue", sender: nil)
     }
@@ -131,22 +119,16 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.newsTableView.reloadData()
                 self.updateScrollView()
                 self.clearLoading()
             }
         }
-        generalButton.backgroundColor = UIColor.darkGray
+        generalButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
@@ -166,15 +148,8 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.newsTableView.reloadData()
                 self.updateScrollView()
@@ -183,7 +158,8 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         generalButton.backgroundColor = UIColor.black
         generalButton.isEnabled = true
-        researchButton.backgroundColor = UIColor.darkGray
+        researchButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        researchButton.setTitleColor(.white, for: .normal)
         researchButton.isEnabled = false
         learningButton.backgroundColor = UIColor.black
         learningButton.isEnabled = true
@@ -201,15 +177,8 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.newsTableView.reloadData()
                 self.updateScrollView()
@@ -220,8 +189,28 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         generalButton.isEnabled = true
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
-        learningButton.backgroundColor = UIColor.darkGray
+        learningButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        learningButton.setTitleColor(.white, for: .normal)
         learningButton.isEnabled = false
+    }
+
+    private func updateModelView() {
+        existNews.removeAll()
+        for feed in existFeeds {
+            existNews.append(NewsViewModel(title: feed.title, content: feed.news, date: feed.createdDate, image: feed.imageurl))
+        }
+    }
+
+    private func updateNewestFeeds() {
+        if(self.existNews.count >= 3) {
+            self.newestFeeds.append(self.existNews[0])
+            self.newestFeeds.append(self.existNews[1])
+            self.newestFeeds.append(self.existNews[2])
+        } else {
+            for index in 0..<self.existFeeds.count {
+                self.newestFeeds.append(self.existNews[index])
+            }
+        }
     }
 
     private func updateScrollView() {
@@ -249,7 +238,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
             dateLabel.textAlignment = .center
 
             imageView.alpha = 0.6
-            imageView.image = self.getPictureFromURL(url: self.newestFeeds[index].imageurl)
+            imageView.image = self.newestFeeds[index].image
 
             //blur the background picture
             let regularBlur = UIBlurEffect(style: .regular)
@@ -259,7 +248,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
             imageView.addSubview(blurView)
 
             tittleLabel.text = self.newestFeeds[index].title
-            dateLabel.text = self.getDateFromSeconds(seconds: self.newestFeeds[index].createdDate)
+            dateLabel.text = self.newestFeeds[index].date
 
             view.addSubview(imageView)
             view.addSubview(tittleLabel)

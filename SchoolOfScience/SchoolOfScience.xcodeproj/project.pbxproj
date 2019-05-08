@@ -32,6 +32,8 @@
 		CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */; };
 		CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCC225859CE00823E06 /* SettingsViewController.swift */; };
 		CDD78CCF225859FF00823E06 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD78CCE225859FF00823E06 /* EventsViewController.swift */; };
+		CDEC19AD228357BE00C73E09 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC19AC228357BE00C73E09 /* NewsViewModel.swift */; };
+		CDEC19AF2283606200C73E09 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC19AE2283606200C73E09 /* EventsViewModel.swift */; };
 		CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EE3C226D873800208613 /* JsonModels.swift */; };
 		CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0EE3E226D878E00208613 /* JsonManager.swift */; };
 		CDF379FE22565E1700382985 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF379FD22565E1700382985 /* NewsViewController.swift */; };
@@ -71,6 +73,8 @@
 		CDD78CCA2258462400823E06 /* ForgetPassowrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowrdViewController.swift; sourceTree = "<group>"; };
 		CDD78CCC225859CE00823E06 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CDD78CCE225859FF00823E06 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		CDEC19AC228357BE00C73E09 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		CDEC19AE2283606200C73E09 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		CDF0EE3C226D873800208613 /* JsonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModels.swift; sourceTree = "<group>"; };
 		CDF0EE3E226D878E00208613 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		CDF379FD22565E1700382985 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				CDF37A01225662A800382985 /* NewsContentViewController.swift */,
 				CDF379FF22565E4900382985 /* NewsTableViewCell.swift */,
 				CD88649C227AA97800518C0A /* NewsModel.swift */,
+				CDEC19AC228357BE00C73E09 /* NewsViewModel.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				CD8864B4227DF48800518C0A /* EventsContentViewController.swift */,
 				CD8864B8227DF4BE00518C0A /* EventsTableViewCell.swift */,
 				CD8864B6227DF49A00518C0A /* EventsModel.swift */,
+				CDEC19AE2283606200C73E09 /* EventsViewModel.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -399,6 +405,8 @@
 				CDD66C122254D83F00B7B8D1 /* AppDelegate.swift in Sources */,
 				CDD78CCF225859FF00823E06 /* EventsViewController.swift in Sources */,
 				CD8864BD227F20F100518C0A /* DeadlineModel.swift in Sources */,
+				CDEC19AD228357BE00C73E09 /* NewsViewModel.swift in Sources */,
+				CDEC19AF2283606200C73E09 /* EventsViewModel.swift in Sources */,
 				CDD78CCB2258462400823E06 /* ForgetPassowrdViewController.swift in Sources */,
 				CDD78CCD225859CE00823E06 /* SettingsViewController.swift in Sources */,
 			);

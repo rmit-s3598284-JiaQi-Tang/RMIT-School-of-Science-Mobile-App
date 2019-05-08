@@ -12,7 +12,9 @@ import Firebase
 class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
     var existFeeds = [Feed]()
-    var newestFeeds = [Feed]()
+    var newestFeeds = [EventsViewModel]()
+    var existEvents = [EventsViewModel]()
+    
     var subViewFrame: CGRect = CGRect(x:0 , y: 0, width: 0, height: 0)
     var subTitleLabelFrame: CGRect = CGRect(x:0 , y: 0, width: 0, height: 0)
     var subDateLabelFrame: CGRect = CGRect(x:0 , y: 0, width: 0, height: 0)
@@ -54,15 +56,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.EventsTableView.reloadData()
                 self.updateScrollView()
@@ -73,7 +68,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         }
 
-        generalButton.backgroundColor = UIColor.darkGray
+        generalButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
@@ -82,17 +78,15 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return existFeeds.count
+        return existEvents.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventsTableViewCell
 
-        cell.tittleLabel.text = self.existFeeds[indexPath.row].title
-
-        let stringDate = self.getDateFromSeconds(seconds: self.existFeeds[indexPath.row].createdDate)
-        cell.dateLabel.text = stringDate
-        cell.tittleUIImage.image = getPictureFromURL(url: existFeeds[indexPath.row].imageurl)
+        cell.tittleLabel.text = self.existEvents[indexPath.row].title
+        cell.dateLabel.text = self.existEvents[indexPath.row].date
+        cell.tittleUIImage.image = self.existEvents[indexPath.row].image
 
         return cell
     }
@@ -103,14 +97,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        //convert date
-        let stringDate = self.getDateFromSeconds(seconds: self.existFeeds[indexPath.row].createdDate)
-
-        //convert imageURL
-        let image = self.getPictureFromURL(url: self.existFeeds[indexPath.row].imageurl)
-
-        EventsModel.upDateDisplayingEvents(title: existFeeds[indexPath.row].title!, content: existFeeds[indexPath.row].eventTagline!, date: stringDate, image: image!)
-
+        EventsModel.upDateDisplayingEvents(title: existEvents[indexPath.row].title!, content: existEvents[indexPath.row].content!, date: existEvents[indexPath.row].date, image: existEvents[indexPath.row].image)
+        
         performSegue(withIdentifier: "showEventContentSegue", sender: nil)
     }
 
@@ -132,22 +120,16 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.EventsTableView.reloadData()
                 self.updateScrollView()
                 self.clearLoading()
             }
         }
-        generalButton.backgroundColor = UIColor.darkGray
+        generalButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
@@ -167,15 +149,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.EventsTableView.reloadData()
                 self.updateScrollView()
@@ -184,7 +159,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         generalButton.backgroundColor = UIColor.black
         generalButton.isEnabled = true
-        researchButton.backgroundColor = UIColor.darkGray
+        researchButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        researchButton.setTitleColor(.white, for: .normal)
         researchButton.isEnabled = false
         learningButton.backgroundColor = UIColor.black
         learningButton.isEnabled = true
@@ -202,15 +178,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             self.existFeeds.append(existFeed)
                         }
                     }
-                    if(self.existFeeds.count >= 3) {
-                        self.newestFeeds.append(self.existFeeds[0])
-                        self.newestFeeds.append(self.existFeeds[1])
-                        self.newestFeeds.append(self.existFeeds[2])
-                    } else {
-                        for index in 0..<self.existFeeds.count {
-                            self.newestFeeds.append(self.existFeeds[index])
-                        }
-                    }
+                    self.updateModelView()
+                    self.updateNewestFeeds()
                 }
                 self.EventsTableView.reloadData()
                 self.updateScrollView()
@@ -221,8 +190,28 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         generalButton.isEnabled = true
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
-        learningButton.backgroundColor = UIColor.darkGray
+        learningButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        learningButton.setTitleColor(.white, for: .normal)
         learningButton.isEnabled = false
+    }
+
+    private func updateModelView() {
+        existEvents.removeAll()
+        for feed in existFeeds {
+            existEvents.append(EventsViewModel(title: feed.title, content: feed.eventTagline, date: feed.createdDate, image: feed.imageurl))
+        }
+    }
+
+    private func updateNewestFeeds() {
+        if(self.existEvents.count >= 3) {
+            self.newestFeeds.append(self.existEvents[0])
+            self.newestFeeds.append(self.existEvents[1])
+            self.newestFeeds.append(self.existEvents[2])
+        } else {
+            for index in 0..<self.existFeeds.count {
+                self.newestFeeds.append(self.existEvents[index])
+            }
+        }
     }
 
     private func updateScrollView() {
@@ -250,7 +239,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             dateLabel.textAlignment = .center
 
             imageView.alpha = 0.6
-            imageView.image = self.getPictureFromURL(url: self.newestFeeds[index].imageurl)
+            imageView.image = newestFeeds[index].image
 
             //blur the background picture
             let regularBlur = UIBlurEffect(style: .regular)
@@ -260,7 +249,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             imageView.addSubview(blurView)
 
             tittleLabel.text = self.newestFeeds[index].title
-            dateLabel.text = self.getDateFromSeconds(seconds: self.newestFeeds[index].createdDate)
+            dateLabel.text = newestFeeds[index].date
 
             view.addSubview(imageView)
             view.addSubview(tittleLabel)

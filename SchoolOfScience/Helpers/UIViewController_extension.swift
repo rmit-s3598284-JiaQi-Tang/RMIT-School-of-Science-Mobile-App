@@ -11,6 +11,32 @@ import UIKit
 
 extension UIViewController{
     
+    public static func getPictureFromURL(url: String?) -> UIImage? {
+        if let imageURL = url {
+            let url = URL(string: imageURL)
+            if let url = url {
+                let data = try? Data(contentsOf: url)
+                if let imageData = data {
+                    return UIImage(data: imageData)
+                } else {
+                    return UIImage.init(named: "rmit-building80")
+                }
+            } else {
+                return UIImage.init(named: "rmit-building80")
+            }
+        } else {
+            return UIImage.init(named: "rmit-building80")
+        }
+    }
+
+    public static func getDateFromSeconds(seconds: Int) -> String {
+        let timeInterval = seconds/1000
+        let myDate = Date(timeIntervalSince1970: Double(timeInterval))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MMM-yyyy"
+        return formatter.string(from: myDate as Date)
+    }
+
     func getPictureFromURL(url: String?) -> UIImage? {
         if let imageURL = url {
             let url = URL(string: imageURL)
