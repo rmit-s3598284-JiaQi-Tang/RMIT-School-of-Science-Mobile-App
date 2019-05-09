@@ -19,6 +19,8 @@
 		CD8864BB227F204300518C0A /* DeadlineContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8864BA227F204300518C0A /* DeadlineContentViewController.swift */; };
 		CD8864BD227F20F100518C0A /* DeadlineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8864BC227F20F100518C0A /* DeadlineModel.swift */; };
 		CD8864BF227F24B300518C0A /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8864BE227F24B300518C0A /* ContactsTableViewCell.swift */; };
+		CDB2960C22847C3B005E0D5B /* DeadLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2960B22847C3B005E0D5B /* DeadLineTableViewCell.swift */; };
+		CDB2960E22848788005E0D5B /* DeadLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2960D22848788005E0D5B /* DeadLineViewModel.swift */; };
 		CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */; };
 		CDC01BB2226636CF00FFE2BF /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB1226636CF00FFE2BF /* MonthView.swift */; };
 		CDC01BB42266371A00FFE2BF /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01BB32266371A00FFE2BF /* CalendarView.swift */; };
@@ -58,6 +60,8 @@
 		CD8864BA227F204300518C0A /* DeadlineContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineContentViewController.swift; sourceTree = "<group>"; };
 		CD8864BC227F20F100518C0A /* DeadlineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineModel.swift; sourceTree = "<group>"; };
 		CD8864BE227F24B300518C0A /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		CDB2960B22847C3B005E0D5B /* DeadLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadLineTableViewCell.swift; sourceTree = "<group>"; };
+		CDB2960D22848788005E0D5B /* DeadLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadLineViewModel.swift; sourceTree = "<group>"; };
 		CDC01BAF2266367100FFE2BF /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		CDC01BB1226636CF00FFE2BF /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		CDC01BB32266371A00FFE2BF /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				CD88649E227AB77D00518C0A /* DeadlineViewController.swift */,
 				CD8864BA227F204300518C0A /* DeadlineContentViewController.swift */,
 				CD8864BC227F20F100518C0A /* DeadlineModel.swift */,
+				CDB2960B22847C3B005E0D5B /* DeadLineTableViewCell.swift */,
+				CDB2960D22848788005E0D5B /* DeadLineViewModel.swift */,
 			);
 			path = Deadline;
 			sourceTree = "<group>";
@@ -393,11 +399,13 @@
 				CDC01BB02266367100FFE2BF /* WeekdaysView.swift in Sources */,
 				CD8864AF227DDE7B00518C0A /* Toast.swift in Sources */,
 				CD8864B5227DF48800518C0A /* EventsContentViewController.swift in Sources */,
+				CDB2960C22847C3B005E0D5B /* DeadLineTableViewCell.swift in Sources */,
 				CD8864B9227DF4BE00518C0A /* EventsTableViewCell.swift in Sources */,
 				CD8864BF227F24B300518C0A /* ContactsTableViewCell.swift in Sources */,
 				CDF0EE3D226D873800208613 /* JsonModels.swift in Sources */,
 				CDD66C142254D83F00B7B8D1 /* LoginViewController.swift in Sources */,
 				CDF37A0022565E4900382985 /* NewsTableViewCell.swift in Sources */,
+				CDB2960E22848788005E0D5B /* DeadLineViewModel.swift in Sources */,
 				CD88649D227AA97800518C0A /* NewsModel.swift in Sources */,
 				CD88649F227AB77D00518C0A /* DeadlineViewController.swift in Sources */,
 				CDF0EE3F226D878E00208613 /* JsonManager.swift in Sources */,

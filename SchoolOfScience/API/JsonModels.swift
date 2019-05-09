@@ -13,7 +13,7 @@ struct Welcome: Codable {
     let message: String
     let feed: [Feed]?
     let contacts: [Contact]?
-    let size: Int
+    let size: Int?
 }
 
 struct Contact: Codable {

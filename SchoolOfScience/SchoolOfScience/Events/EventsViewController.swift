@@ -68,7 +68,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         }
 
-        generalButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        generalButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
         researchButton.backgroundColor = UIColor.black
@@ -128,7 +128,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.clearLoading()
             }
         }
-        generalButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        generalButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
         researchButton.backgroundColor = UIColor.black
@@ -159,7 +159,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         generalButton.backgroundColor = UIColor.black
         generalButton.isEnabled = true
-        researchButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        researchButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         researchButton.setTitleColor(.white, for: .normal)
         researchButton.isEnabled = false
         learningButton.backgroundColor = UIColor.black
@@ -190,7 +190,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         generalButton.isEnabled = true
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
-        learningButton.backgroundColor = #colorLiteral(red: 0.9348385334, green: 0.1952961981, blue: 0.1424255967, alpha: 1)
+        learningButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         learningButton.setTitleColor(.white, for: .normal)
         learningButton.isEnabled = false
     }

@@ -8,9 +8,12 @@
 
 import UIKit
 
-class DeadlineViewController: UIViewController {
+class DeadlineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var deadLineTableView: UITableView!
 
     var deadlineDates: [String] = [String]()
+    var deadLineCellViewModels: [DeadLineViewModel] = [DeadLineViewModel]()
 
     let calenderView: CalenderView = {
         let v=CalenderView(theme: MyTheme.dark)
@@ -27,7 +30,7 @@ class DeadlineViewController: UIViewController {
         self.view.backgroundColor=Style.bgColor
 
         view.addSubview(calenderView)
-        calenderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 240).isActive=true
+        calenderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive=true
         calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive=true
         calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
         calenderView.heightAnchor.constraint(equalToConstant: 400).isActive=true
@@ -44,6 +47,28 @@ class DeadlineViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return deadLineCellViewModels.count
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "deadlineCell", for: indexPath) as! DeadLineTableViewCell
+        cell.dateLabel.text = deadLineCellViewModels[indexPath.row].date
+        cell.tittleLabel.text = deadLineCellViewModels[indexPath.row].title
+        cell.departmentLabel.text = deadLineCellViewModels[indexPath.row].department
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DeadlineModel.upDateDisplayingDeadline(title: deadLineCellViewModels[indexPath.row].title!, content: deadLineCellViewModels[indexPath.row].content!, date: deadLineCellViewModels[indexPath.row].date, image: deadLineCellViewModels[indexPath.row].image)
+        self.performSegue(withIdentifier: "deadlineSegue", sender: nil)
+
     }
 
     @IBAction func LogoTapped(_ sender: Any) {
@@ -84,6 +109,4 @@ class DeadlineViewController: UIViewController {
             }
         }
     }
-
-
 }

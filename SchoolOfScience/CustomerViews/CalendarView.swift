@@ -14,7 +14,7 @@ enum MyTheme {
 }
 struct Colors {
     static var darkGray = #colorLiteral(red: 0.3764705882, green: 0.3647058824, blue: 0.3647058824, alpha: 1)
-    static var darkRed = #colorLiteral(red: 0.5019607843, green: 0.1529411765, blue: 0.1764705882, alpha: 1)
+    static var darkRed = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
 }
 
 struct Style {
@@ -125,25 +125,30 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         let lbl = cell?.subviews[1] as! UILabel
-        print("\(lbl.text!) \(currentMonthIndex) \(currentYear)")
 
         //present deadline content UIViewcontroller
         if cell?.backgroundColor == Colors.darkRed {
             self.showLoading()
             JsonManager.getDeadLineFeeds() {feeds in
                 DispatchQueue.main.async {
+                    let currentController = self.getCurrentViewController() as! DeadlineViewController
+                    currentController.deadLineCellViewModels.removeAll()
                     guard let feeds = feeds else { return }
                     for feed in feeds {
                         guard let deadlineDate = feed.deadlineDate else { return }
                         if(self.getNumberDateFromSeconds(seconds: deadlineDate) == "\(lbl.text!)-\(self.currentMonthIndex)-\(self.currentYear)") {
-                            print(feed.title!)
-                            DeadlineModel.upDateDisplayingDeadline(title: feed.title!, content: feed.news!, date: self.getNumberDateFromSeconds(seconds: deadlineDate), image: self.getPictureFromURL(url: feed.imageurl)!)
+
+                            currentController.deadLineCellViewModels.append(DeadLineViewModel(title: feed.title, date: self.getNumberDateFromSeconds(seconds: deadlineDate), content: feed.news, image: self.getPictureFromURL(url: feed.imageurl)!, department: feed.department.rawValue))
+                            currentController.deadLineTableView.reloadData()
+//                            if let pic = self.getPictureFromURL(url: feed.imageurl) {
+//                                currentController.deadLineCellViewModels.append(DeadLineViewModel(title: feed.title, date: self.getNumberDateFromSeconds(seconds: deadlineDate), content: feed.news, image: pic))
+//                                currentController.deadLineTableView.reloadData()
+//                            } else {
+//                                currentController.deadLineCellViewModels.append(DeadLineViewModel(title: feed.title, date: self.getNumberDateFromSeconds(seconds: deadlineDate), content: feed.news, image: UIImage(named: "rmit-building80")!))
+//                                currentController.deadLineTableView.reloadData()
+//                            }
                         }
                     }
-                    let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
-                    let vc: DeadlineContentViewController = storyboard.instantiateViewController(withIdentifier: "deadlineContentViewController") as! DeadlineContentViewController
-                    let currentController = self.getCurrentViewController()
-                    currentController?.present(vc, animated: false, completion: nil)
                     self.clearLoading()
                 }
             }
