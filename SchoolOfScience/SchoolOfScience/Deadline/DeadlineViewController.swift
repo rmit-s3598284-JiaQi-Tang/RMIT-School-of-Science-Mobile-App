@@ -12,6 +12,8 @@ class DeadlineViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var deadLineTableView: UITableView!
 
+    @IBOutlet weak var lineLabel: UILabel!
+    
     var deadlineDates: [String] = [String]()
     var deadLineCellViewModels: [DeadLineViewModel] = [DeadLineViewModel]()
 
@@ -30,10 +32,10 @@ class DeadlineViewController: UIViewController, UITableViewDelegate, UITableView
         self.view.backgroundColor=Style.bgColor
 
         view.addSubview(calenderView)
-        calenderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive=true
-        calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive=true
-        calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
-        calenderView.heightAnchor.constraint(equalToConstant: 400).isActive=true
+        calenderView.topAnchor.constraint(equalTo: lineLabel.topAnchor, constant: 10).isActive=true
+        calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive=true
+        calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive=true
+        calenderView.heightAnchor.constraint(equalToConstant: view.frame.width * 8 / 7).isActive=true
 
         highlightDeadLine()
 
@@ -54,7 +56,7 @@ class DeadlineViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 50
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

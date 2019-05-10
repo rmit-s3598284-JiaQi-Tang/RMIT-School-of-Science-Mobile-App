@@ -29,6 +29,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var subDateLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
 
 
 
@@ -36,11 +37,15 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.hideKeyboardWhenTappedAround()
         self.showLoading()
 
-        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
-
         generalButton.adjustsImageWhenDisabled = false
         researchButton.adjustsImageWhenDisabled = false
         learningButton.adjustsImageWhenDisabled = false
+
+        generalButton.leftAnchor.constraint(equalTo: stackView.leftAnchor, constant: 0).isActive=true
+        researchButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
+        researchButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor, constant: 0).isActive = true
+        learningButton.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 0).isActive=true
+
 
         JsonManager.getNewsFeeds(department: "GENERAL") {feeds in
             DispatchQueue.main.async {
@@ -72,8 +77,10 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         generalButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
+        researchButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
+        learningButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         learningButton.backgroundColor = UIColor.black
         learningButton.isEnabled = true
 
@@ -132,8 +139,10 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         generalButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         generalButton.setTitleColor(.white, for: .normal)
         generalButton.isEnabled = false
+        researchButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
+        learningButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         learningButton.backgroundColor = UIColor.black
         learningButton.isEnabled = true
     }
@@ -158,11 +167,13 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.clearLoading()
             }
         }
+        generalButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         generalButton.backgroundColor = UIColor.black
         generalButton.isEnabled = true
         researchButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)
         researchButton.setTitleColor(.white, for: .normal)
         researchButton.isEnabled = false
+        learningButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         learningButton.backgroundColor = UIColor.black
         learningButton.isEnabled = true
     }
@@ -187,8 +198,10 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.clearLoading()
             }
         }
+        generalButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         generalButton.backgroundColor = UIColor.black
         generalButton.isEnabled = true
+        researchButton.setTitleColor(#colorLiteral(red: 0.7093815207, green: 0.1463209987, blue: 0.1024117991, alpha: 1), for: .normal)
         researchButton.backgroundColor = UIColor.black
         researchButton.isEnabled = true
         learningButton.backgroundColor = #colorLiteral(red: 0.7848398089, green: 0.1659219265, blue: 0.1861632168, alpha: 1)

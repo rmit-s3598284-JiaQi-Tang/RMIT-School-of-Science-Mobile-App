@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,27 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EDUCATION_RMIT-City" translatesAutoresizingMaskIntoConstraints="NO" id="421-dx-u60">
-                                <rect key="frame" x="0.0" y="-71.5" width="375" height="810"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="810" id="rc7-Jt-tgX"/>
-                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rmit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Blk-fB-Sjn">
-                                <rect key="frame" x="210" y="30" width="149" height="50"/>
+                                <rect key="frame" x="259" y="25" width="100" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="149" id="CNU-GC-j3I"/>
-                                    <constraint firstAttribute="height" constant="50" id="T2P-XD-d1B"/>
+                                    <constraint firstAttribute="width" constant="100" id="0jc-lx-yw3"/>
+                                    <constraint firstAttribute="height" constant="36" id="PJv-Hq-n6R"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="Blk-fB-Sjn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="97" id="Qig-jH-BYy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="421-dx-u60" secondAttribute="trailing" id="Rf3-Bd-2SF"/>
-                            <constraint firstItem="421-dx-u60" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ebE-6p-zUj"/>
-                            <constraint firstItem="421-dx-u60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oax-ZW-QNZ"/>
-                            <constraint firstItem="Blk-fB-Sjn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-278.5" id="v2B-qS-axn"/>
+                            <constraint firstItem="421-dx-u60" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="6XC-HY-5Yb"/>
+                            <constraint firstAttribute="trailing" secondItem="421-dx-u60" secondAttribute="trailing" id="Eln-Iv-B8E"/>
+                            <constraint firstAttribute="bottom" secondItem="421-dx-u60" secondAttribute="bottom" id="fQa-DW-Eo9"/>
+                            <constraint firstItem="421-dx-u60" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ihw-u8-dVG"/>
+                            <constraint firstItem="Blk-fB-Sjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="twd-L5-3Se"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Blk-fB-Sjn" secondAttribute="trailing" constant="16" id="vnR-vb-uGG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -51,6 +49,6 @@
     </scenes>
     <resources>
         <image name="EDUCATION_RMIT-City" width="600" height="900"/>
-        <image name="rmit-logo" width="321.60000610351562" height="111.36000061035156"/>
+        <image name="rmit-logo" width="670" height="232"/>
     </resources>
 </document>
