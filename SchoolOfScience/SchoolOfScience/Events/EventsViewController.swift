@@ -46,8 +46,10 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         researchButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
         researchButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor, constant: 0).isActive = true
         learningButton.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 0).isActive=true
+        generalButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
+        learningButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
         
-        JsonManager.getEventsFeeds(department: "GENERAL") {feeds in
+        APIManager.getEventsFeeds(department: "GENERAL") {feeds in
             DispatchQueue.main.async {
 
                 self.subViewFrame = self.subView.frame
@@ -120,7 +122,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         existFeeds.removeAll()
         newestFeeds.removeAll()
         self.showLoading()
-        JsonManager.getEventsFeeds(department: "GENERAL") {feeds in
+        APIManager.getEventsFeeds(department: "GENERAL") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
@@ -151,7 +153,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         existFeeds.removeAll()
         newestFeeds.removeAll()
         self.showLoading()
-        JsonManager.getEventsFeeds(department: "RESEARCH") {feeds in
+        APIManager.getEventsFeeds(department: "RESEARCH") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
@@ -182,7 +184,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         existFeeds.removeAll()
         newestFeeds.removeAll()
         self.showLoading()
-        JsonManager.getEventsFeeds(department: "Learning") {feeds in
+        APIManager.getEventsFeeds(department: "Learning") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {

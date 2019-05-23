@@ -129,7 +129,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         //present deadline content UIViewcontroller
         if cell?.backgroundColor == Colors.darkRed {
             self.showLoading()
-            JsonManager.getDeadLineFeeds() {feeds in
+            APIManager.getDeadLineFeeds() {feeds in
                 DispatchQueue.main.async {
                     let currentController = self.getCurrentViewController() as! DeadlineViewController
                     currentController.deadLineCellViewModels.removeAll()

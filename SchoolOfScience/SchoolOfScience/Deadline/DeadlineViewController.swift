@@ -56,7 +56,7 @@ class DeadlineViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return view.frame.height/8
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,7 +91,7 @@ class DeadlineViewController: UIViewController, UITableViewDelegate, UITableView
 
     private func highlightDeadLine() {
         self.showLoading()
-        JsonManager.getDeadLineFeeds() {feeds in
+        APIManager.getDeadLineFeeds() {feeds in
             DispatchQueue.main.async {
                 guard let feeds = feeds else { return }
                 for feed in feeds {

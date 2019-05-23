@@ -25,7 +25,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
 
-        JsonManager.getContacts() {contacts in
+        APIManager.getContacts() {contacts in
             DispatchQueue.main.async {
                 if let contacts = contacts {
                     for existContact in contacts {

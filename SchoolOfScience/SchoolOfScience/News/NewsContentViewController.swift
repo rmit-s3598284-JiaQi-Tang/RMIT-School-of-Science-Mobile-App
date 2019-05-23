@@ -22,7 +22,8 @@ class NewsContentViewController: UIViewController {
         tittleLabel.text = NewsModel.title
         dateLabel.text = NewsModel.date
         imageUIImageView.image = NewsModel.image
-        contentTextView.attributedText = NSAttributedString(string: NewsModel.content)
+//        contentTextView.attributedText = NSAttributedString(string: NewsModel.content)
+        contentTextView.text = NewsModel.content
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {

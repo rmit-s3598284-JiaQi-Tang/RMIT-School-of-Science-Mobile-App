@@ -45,9 +45,11 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         researchButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
         researchButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor, constant: 0).isActive = true
         learningButton.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 0).isActive=true
+        generalButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
+        learningButton.widthAnchor.constraint(equalToConstant: (view.frame.width - 32 )/3).isActive = true
 
 
-        JsonManager.getNewsFeeds(department: "GENERAL") {feeds in
+        APIManager.getNewsFeeds(department: "GENERAL") {feeds in
             DispatchQueue.main.async {
 
                 self.subViewFrame = self.subView.frame
@@ -120,7 +122,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         existFeeds.removeAll()
         newestFeeds.removeAll()
         self.showLoading()
-        JsonManager.getNewsFeeds(department: "GENERAL") {feeds in
+        APIManager.getNewsFeeds(department: "GENERAL") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
@@ -151,7 +153,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         existFeeds.removeAll()
         newestFeeds.removeAll()
         self.showLoading()
-        JsonManager.getNewsFeeds(department: "RESEARCH") {feeds in
+        APIManager.getNewsFeeds(department: "RESEARCH") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
@@ -182,7 +184,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         existFeeds.removeAll()
         newestFeeds.removeAll()
         self.showLoading()
-        JsonManager.getNewsFeeds(department: "Learning") {feeds in
+        APIManager.getNewsFeeds(department: "Learning") {feeds in
             DispatchQueue.main.async {
                 if let feeds = feeds {
                     for existFeed in feeds {
