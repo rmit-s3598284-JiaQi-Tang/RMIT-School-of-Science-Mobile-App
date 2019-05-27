@@ -15,8 +15,8 @@ class ForgetPassowrdViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        cancelButton.layer.cornerRadius = 10.0
-        sendEmailButton.layer.cornerRadius = 10.0
+//        cancelButton.layer.cornerRadius = 10.0
+//        sendEmailButton.layer.cornerRadius = 10.0
         self.hideKeyboardWhenTappedAround()
         
     }

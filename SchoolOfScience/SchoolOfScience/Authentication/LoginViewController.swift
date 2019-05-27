@@ -17,8 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround()
-        loginButton.layer.cornerRadius = 10.0
-        signupButton.layer.cornerRadius = 10.0
+//        loginButton.layer.cornerRadius = 10.0
+//        signupButton.layer.cornerRadius = 10.0
     }
     override func viewDidAppear(_ animated: Bool) {
         if(Auth.auth().currentUser != nil) {

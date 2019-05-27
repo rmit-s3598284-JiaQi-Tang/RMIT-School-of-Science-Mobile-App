@@ -103,4 +103,8 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func logoTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -111,4 +111,7 @@ class DeadlineViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
     }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

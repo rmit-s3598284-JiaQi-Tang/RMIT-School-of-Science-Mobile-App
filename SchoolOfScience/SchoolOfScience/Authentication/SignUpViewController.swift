@@ -19,8 +19,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        cancelButton.layer.cornerRadius = 10.0
-        signupButton.layer.cornerRadius = 10.0
+//        cancelButton.layer.cornerRadius = 10.0
+//        signupButton.layer.cornerRadius = 10.0
         self.hideKeyboardWhenTappedAround() 
     }
 
