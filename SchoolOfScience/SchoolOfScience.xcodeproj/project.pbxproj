@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4ABAA6D5131539BED5F635C0 /* Pods_SchoolOfScience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */; };
+		CD3033CD229BA10E0060E356 /* SchoolOfScienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3033CC229BA10E0060E356 /* SchoolOfScienceUITests.swift */; };
 		CD88649D227AA97800518C0A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649C227AA97800518C0A /* NewsModel.swift */; };
 		CD88649F227AB77D00518C0A /* DeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88649E227AB77D00518C0A /* DeadlineViewController.swift */; };
 		CD8864A6227CB3BD00518C0A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8864A5227CB3BD00518C0A /* ContactsViewController.swift */; };
@@ -45,12 +46,25 @@
 		CDF37A02225662A800382985 /* NewsContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF37A01225662A800382985 /* NewsContentViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CD3033CF229BA10E0060E356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDD66C062254D83E00B7B8D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDD66C0D2254D83F00B7B8D1;
+			remoteInfo = SchoolOfScience;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		16B18CCEEA28716CB2B2FAE3 /* Pods-SchoolOfScience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.debug.xcconfig"; sourceTree = "<group>"; };
 		23F16CF01C45BCC2C7F77058 /* Pods_SchoolOfScienceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolOfScienceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240707476AA02CE4CED7D1DA /* Pods_SchoolOfScience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolOfScience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0A3D376C1B92FBF3633FD5 /* Pods_SchoolOfScienceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolOfScienceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		889C276F8F3D05E70A3F4B73 /* Pods-SchoolOfScience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolOfScience.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolOfScience/Pods-SchoolOfScience.release.xcconfig"; sourceTree = "<group>"; };
+		CD3033CA229BA10E0060E356 /* SchoolOfScienceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolOfScienceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3033CC229BA10E0060E356 /* SchoolOfScienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolOfScienceUITests.swift; sourceTree = "<group>"; };
+		CD3033CE229BA10E0060E356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD88649C227AA97800518C0A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		CD88649E227AB77D00518C0A /* DeadlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineViewController.swift; sourceTree = "<group>"; };
 		CD8864A5227CB3BD00518C0A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +105,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD3033C7229BA10E0060E356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDD66C0B2254D83F00B7B8D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,6 +131,15 @@
 				4F0A3D376C1B92FBF3633FD5 /* Pods_SchoolOfScienceUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD3033CB229BA10E0060E356 /* SchoolOfScienceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD3033CC229BA10E0060E356 /* SchoolOfScienceUITests.swift */,
+				CD3033CE229BA10E0060E356 /* Info.plist */,
+			);
+			path = SchoolOfScienceUITests;
 			sourceTree = "<group>";
 		};
 		CD8864A1227C9FB100518C0A /* Authentication */ = {
@@ -196,6 +226,7 @@
 				CDF0EE3B226D871100208613 /* API */,
 				CDD66C102254D83F00B7B8D1 /* SchoolOfScience */,
 				CDC01BB52266384D00FFE2BF /* CustomerViews */,
+				CD3033CB229BA10E0060E356 /* SchoolOfScienceUITests */,
 				CDD66C0F2254D83F00B7B8D1 /* Products */,
 				F679AF34C908036627D76745 /* Pods */,
 				213593D0051C30CC7EF68BDF /* Frameworks */,
@@ -206,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD66C0E2254D83F00B7B8D1 /* SchoolOfScience.app */,
+				CD3033CA229BA10E0060E356 /* SchoolOfScienceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,6 +281,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CD3033C9229BA10E0060E356 /* SchoolOfScienceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD3033D3229BA10E0060E356 /* Build configuration list for PBXNativeTarget "SchoolOfScienceUITests" */;
+			buildPhases = (
+				CD3033C6229BA10E0060E356 /* Sources */,
+				CD3033C7229BA10E0060E356 /* Frameworks */,
+				CD3033C8229BA10E0060E356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD3033D0229BA10E0060E356 /* PBXTargetDependency */,
+			);
+			name = SchoolOfScienceUITests;
+			productName = SchoolOfScienceUITests;
+			productReference = CD3033CA229BA10E0060E356 /* SchoolOfScienceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CDD66C0D2254D83F00B7B8D1 /* SchoolOfScience */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDD66C362254D84200B7B8D1 /* Build configuration list for PBXNativeTarget "SchoolOfScience" */;
@@ -275,10 +325,14 @@
 		CDD66C062254D83E00B7B8D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jacky Tang";
 				TargetAttributes = {
+					CD3033C9229BA10E0060E356 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CDD66C0D2254D83F00B7B8D1;
+					};
 					CDD66C0D2254D83F00B7B8D1 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -298,11 +352,19 @@
 			projectRoot = "";
 			targets = (
 				CDD66C0D2254D83F00B7B8D1 /* SchoolOfScience */,
+				CD3033C9229BA10E0060E356 /* SchoolOfScienceUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CD3033C8229BA10E0060E356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDD66C0C2254D83F00B7B8D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +452,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD3033C6229BA10E0060E356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD3033CD229BA10E0060E356 /* SchoolOfScienceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDD66C0A2254D83F00B7B8D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,6 +500,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CD3033D0229BA10E0060E356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDD66C0D2254D83F00B7B8D1 /* SchoolOfScience */;
+			targetProxy = CD3033CF229BA10E0060E356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CDD66C152254D83F00B7B8D1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -450,6 +528,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CD3033D1229BA10E0060E356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SchoolOfScienceUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jacky.SchoolOfScienceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SchoolOfScience;
+			};
+			name = Debug;
+		};
+		CD3033D2229BA10E0060E356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SchoolOfScienceUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jacky.SchoolOfScienceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SchoolOfScience;
+			};
+			name = Release;
+		};
 		CDD66C342254D84200B7B8D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -607,6 +723,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD3033D3229BA10E0060E356 /* Build configuration list for PBXNativeTarget "SchoolOfScienceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD3033D1229BA10E0060E356 /* Debug */,
+				CD3033D2229BA10E0060E356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CDD66C092254D83E00B7B8D1 /* Build configuration list for PBXProject "SchoolOfScience" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
