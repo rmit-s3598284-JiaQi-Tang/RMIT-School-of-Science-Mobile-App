@@ -135,7 +135,7 @@ class SchoolOfScienceUITests: XCTestCase {
         app.tables.staticTexts["How to go from a democracy to dictatorship in a few easy steps"].tap()
         XCTAssert(app.staticTexts["How to go from a democracy to dictatorship in a few easy steps"].exists)
 
-        app.buttons["<"].tap()
+        app.buttons["Back"].tap()
         waitForElementToBeHitable(app.tabBars.buttons["News"])
         XCTAssert(app.tabBars.buttons["News"].exists)
 
@@ -155,7 +155,7 @@ class SchoolOfScienceUITests: XCTestCase {
         app.tables.staticTexts["TTTT"].tap()
         XCTAssert(app.staticTexts["TTTT"].exists)
 
-        app.buttons["<"].tap()
+        app.buttons["Back"].tap()
         waitForElementToBeHitable(app.tabBars.buttons["Events"])
         XCTAssert(app.tabBars.buttons["Events"].exists)
 
@@ -175,11 +175,11 @@ class SchoolOfScienceUITests: XCTestCase {
     func test_Deadlines() {
         test_Login()
 
-        waitForElementToBeHitable(app.buttons["timer"])
-        app.buttons["timer"].tap()
+        waitForElementToBeHitable(app.buttons["timer red"])
+        app.buttons["timer red"].tap()
         XCTAssert(app.staticTexts["Deadlines"].exists)
 
-        app.buttons["rmitButton"].tap()
+        app.buttons["Back"].tap()
         XCTAssert(!app.staticTexts["Deadlines"].exists)
 
     }
@@ -202,6 +202,7 @@ class SchoolOfScienceUITests: XCTestCase {
     }
 
 }
+
 extension XCUIApplication {
     public func dismissKeyboard() {
         // If the hardware keyboard connected, only the keyboard’s top bar will display
