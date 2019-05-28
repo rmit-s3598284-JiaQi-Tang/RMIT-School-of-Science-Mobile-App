@@ -22,7 +22,7 @@ class EventsContentViewController: UIViewController {
         tittleLabel.text = EventsModel.title
         dateLabel.text = EventsModel.date
         imageUIImageView.image = EventsModel.image
-        contentTextView.attributedText = NSAttributedString(string: EventsModel.content)
+        contentTextView.text = EventsModel.content
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {

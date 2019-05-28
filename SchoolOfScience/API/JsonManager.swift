@@ -14,7 +14,7 @@ class APIManager {
     typealias ContactsCompletionHandler = ([Contact]?) -> Void
 
     public static func login(username: String, password: String, completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-gateway-test.herokuapp.com/authenticate?username=s3598284@student.rmit.edu.au&password=t4908866")
+        let fortniteChallengesURL = URL(string: "https://rmit-gateway.herokuapp.com/authenticate?username=s3598284@student.rmit.edu.au&password=t4908866")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")
@@ -35,7 +35,7 @@ class APIManager {
     }
 
     public static func getNewsFeeds(department: String, completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-engine-test.herokuapp.com/student/getFeedsforMobile?department=\(department)&feedType=NEWS")
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeedsforMobile?department=\(department)&feedType=NEWS")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")
@@ -56,7 +56,7 @@ class APIManager {
     }
 
     public static func getEventsFeeds(department: String, completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-engine-test.herokuapp.com/student/getFeedsforMobile?department=\(department)&feedType=EVENTS")
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeedsforMobile?department=\(department)&feedType=EVENTS")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")
@@ -98,7 +98,7 @@ class APIManager {
     }
 
     public static func getDeadLineFeeds(completion: @escaping CompletionHandler) {
-        let fortniteChallengesURL = URL(string: "https://rmit-engine-test.herokuapp.com/student/getFeedsforMobile?feedType=DEADLINES")
+        let fortniteChallengesURL = URL(string: "https://rmit-engine.herokuapp.com/student/getFeedsforMobile?feedType=DEADLINES")
         if let unwrappedURL = fortniteChallengesURL {
             var request = URLRequest(url: unwrappedURL)
             request.addValue("1", forHTTPHeaderField: "userId")

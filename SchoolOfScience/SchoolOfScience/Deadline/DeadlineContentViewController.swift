@@ -21,7 +21,7 @@ class DeadlineContentViewController: UIViewController {
         tittleLabel.text = DeadlineModel.title
         dateLabel.text = DeadlineModel.date
         imageUIImageView.image = DeadlineModel.image
-        contentTextView.attributedText = NSAttributedString(string: DeadlineModel.content)
+        contentTextView.text = DeadlineModel.content
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
